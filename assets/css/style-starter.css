@@ -19194,7 +19194,7 @@ h3.title-style {
 
 /* banner slider */
 .slide-1 {
-  background: url(../images/banner1.jpg) no-repeat center;
+  background: url(../images/banner1.webp) no-repeat center;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -19203,7 +19203,7 @@ h3.title-style {
 }
 
 .slide-2 {
-  background: url(../images/banner4.jpg) no-repeat center;
+  background: url(../images/banner4.webp) no-repeat center;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -19212,7 +19212,7 @@ h3.title-style {
 }
 
 .slide-3 {
-  background: url(../images/banner2.jpg) no-repeat center;
+  background: url(../images/banner2.webp) no-repeat center;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -19221,7 +19221,7 @@ h3.title-style {
 }
 
 .slide-4 {
-  background: url(../images/banner3.jpg) no-repeat center;
+  background: url(../images/banner3.webp) no-repeat center;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -20421,7 +20421,7 @@ p.copy-footer-29 a:hover {
 
 /* inner banner */
 .inner-banner {
-  background: url(../images/inner-banner.jpg) no-repeat top left;
+  background: url(../images/inner-banner.webp) no-repeat top left;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
