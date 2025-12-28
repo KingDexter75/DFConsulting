@@ -377,7 +377,6 @@
                             <a href="#blog" class="course-desc">Travel the Most Beautiful Places in the
                                 World</a>
                             <p class="mt-2">Le monde est une carte, et nous vous donnons les clés pour en écrire votre histoire</p>
-                            <a href="#blog" class="btn btn-style mt-4">Read more</a>
                         </div>
                     </div>
                 </div>
@@ -398,7 +397,6 @@
                             </div>
                             <a href="#blog" class="course-desc">A Place where Start New Life with Peace</a>
                             <p class="mt-2">Oubliez vos soucis, votre prochaine aventure inoubliable commence ici !</p>
-                            <a href="#blog" class="btn btn-style mt-4">Read more</a>
                         </div>
                     </div>
                 </div>
@@ -420,7 +418,6 @@
                             <a href="#blog" class="course-desc">Top 10 Destinations & Adventure Trips</a>
                             <p class="mt-2">Lorem ipsum dolor sit, amet consectetur elit. Earum mollitia
                                 ipsam autem.</p>
-                            <a href="#blog" class="btn btn-style mt-4">Read more</a>
                         </div>
                     </div>
                 </div>
