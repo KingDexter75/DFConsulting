@@ -67,8 +67,8 @@
             <div class="container py-xl-5 py-lg-4">
                 <h4 class="inner-text-title font-weight-bold pt-5">À Propos de Nous</h4>
                 <ul class="breadcrumbs-custom-path">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="active"><i class="fas fa-angle-right mx-2"></i>About</li>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="active"><i class="fas fa-angle-right mx-2"></i>À Propos</li>
                 </ul>
             </div>
         </div>
@@ -80,12 +80,12 @@
         <div class="container py-lg-5 py-md-4 py-2">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <img src="assets/images/about3.webp" class="img-fluid radius-image" alt="">
+                    <img src="assets/images/about3.jpg" class="img-fluid radius-image" alt="">
                 </div>
                 <div class="col-lg-6 ps-lg-5 mt-lg-0 mt-4">
                     <div class="title-main">
                         <p>À Propos de Nous</p>
-                        <h3 class="title-style">DFConsulting Language and Travel SARL</h3>
+                        <h3 class="title-style mt-2">DFConsulting Language and Travel SARL</h3>
                     </div>
                     <p class="mt-4">DFConsulting Language and Travel SARL est un centre de promotion des langues et cultures étrangères et assistance visa. 
                         Notre mission principale est d'accompagner les étudiants dans l'apprentissage des langues étrangères (Italien, Allemand et Anglais).</p>
@@ -103,7 +103,7 @@
         <div class="container py-lg-5 py-md-4 py-2">
             <div class="title-main text-center mx-auto mb-5" style="max-width:600px;">
                 <p>Nos Résultats</p>
-                <h3 class="title-style text-white">DFConsulting en Chiffres</h3>
+                <h3 class="title-style text-white mt-2">DFConsulting en Chiffres</h3>
             </div>
             <div class="w3-stats text-center py-lg-4">
                 <div class="row">
@@ -158,7 +158,7 @@
         <div class="container py-lg-5 py-md-4 py-2">
             <div class="title-main text-center mx-auto mb-md-5 mb-4" style="max-width:600px;">
                 <p>Notre Équipe</p>
-                <h3 class="title-style">Rencontrez nos Formateurs</h3>
+                <h3 class="title-style mt-2">Rencontrez nos Formateurs</h3>
             </div>
             <div class="row text-center">
                 <div class="col-lg-3 col-6">
@@ -211,12 +211,12 @@
         <div class="container pb-lg-5 pb-md-4 pb-2">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <img src="assets/images/about2.webp" alt="" class="img-fluid radius-image">
+                    <img src="assets/images/about2.jpeg" alt="" class="img-fluid radius-image">
                 </div>
                 <div class="col-lg-6 ps-xl-5 ps-lg-4 mt-lg-0 mt-5">
                     <div class="title-main mb-4" style="max-width:600px;">
                         <p>Nos Services</p>
-                        <h3 class="title-style">Orientation dans votre Parcours</h3>
+                        <h3 class="title-style mt-2">Orientation dans votre Parcours</h3>
                     </div>
                     <p>DFConsulting vous accompagne dans toutes les étapes de votre projet d'études à l'étranger. 
                         Notre équipe d'experts vous guide dans chaque démarche administrative et académique pour assurer votre réussite.</p>
@@ -254,8 +254,8 @@
     <section class="dex-clients py-5 mb-5 mt-4" id="testimonials">
         <div class="container py-md-5 py-4">
             <div class="title-main text-center mx-auto mb-5" style="max-width:600px;">
-                <p class="mt-2">Testimonials</p>
-                <h3 class="title-style">Happy With Customers & Clients</h3>
+                <p class="mt-2">Temoignages</p>
+                <h3 class="title-style mt-2">Ce que disent nos clients</h3>
             </div>
             <div id="owl-demo2" class="owl-carousel owl-theme mt-4 py-md-2 mb-md-4">
                 <div class="item">
@@ -268,8 +268,8 @@
                                 faucibus orci luctus et ultrices posuere,tesque libero ut justo Semper.</p>
                         </div>
                         <div class="bottom-info mt-4">
-                            <a class="comment-img" href="#url"><img src="assets/images/testi1.webp"
-                                    class="img-responsive" alt="placeholder image"></a>
+                            <a class="comment-img" href="#url">
+                                <img src="assets/images/testi1.webp" class="img-responsive" alt="placeholder image"></a>
                             <div class="people-info align-self">
                                 <h3>Johnson william</h3>
                                 <p class="identity">Subtitle</p>
@@ -287,8 +287,8 @@
                                 faucibus orci luctus et ultrices posuere,tesque libero ut justo Semper.</p>
                         </div>
                         <div class="bottom-info mt-4">
-                            <a class="comment-img" href="#url"><img src="assets/images/testi2.webp"
-                                    class="img-responsive" alt="placeholder image"></a>
+                            <a class="comment-img" href="#url">
+                                <img src="assets/images/testi2.webp" class="img-responsive" alt="placeholder image"></a>
                             <div class="people-info align-self">
                                 <h3>Alexander sakura</h3>
                                 <p class="identity">Subtitle</p>
@@ -306,8 +306,8 @@
                                 faucibus orci luctus et ultrices posuere,tesque libero ut justo Semper.</p>
                         </div>
                         <div class="bottom-info mt-4">
-                            <a class="comment-img" href="#url"><img src="assets/images/testi3.webp"
-                                    class="img-responsive" alt="placeholder image"></a>
+                            <a class="comment-img" href="#url">
+                                <img src="assets/images/testi3.webp" class="img-responsive" alt="placeholder image"></a>
                             <div class="people-info align-self">
                                 <h3>John wilson</h3>
                                 <p class="identity">Subtitle</p>

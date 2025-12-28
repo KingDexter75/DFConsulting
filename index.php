@@ -112,7 +112,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5">
-                    <img src="assets/images/about.webp" alt="" class="img-fluid radius-image" loading="lazy">
+                    <img src="assets/images/about3.jpg" alt="" class="img-fluid radius-image" loading="lazy">
                 </div>
                 <div class="col-lg-6 ps-xl-5 ps-lg-4 mt-lg-0 mt-5">
                     <div class="title-main">
@@ -319,7 +319,7 @@
         <div class="container pb-lg-5 pb-md-4 pb-2">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <video src="assets/images/about.mp4" class="img-fluid radius-image" loading="lazy" autoplay loop controls></video>
+                    <video src="assets/images/about.mp4" class="img-fluid radius-image" loading="lazy" autoplay loop controls muted></video>
                     <!-- <img src="assets/images/about2.webp" alt="" class="img-fluid radius-image" loading="lazy"> -->
                 </div>
                 <div class="col-lg-6 ps-xl-5 ps-lg-4 mt-lg-0 mt-5">
