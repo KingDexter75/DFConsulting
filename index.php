@@ -18,7 +18,7 @@
     <header id="site-header" class="fixed-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="index.php">
                     <img src="assets/images/logo.webp" alt="logo de l'entreprise">
                     DFConsulting
                 </a>
@@ -31,13 +31,13 @@
                 <div class="collapse navbar-collapse" id="navbarScroll">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
+                            <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">À propos</a>
+                            <a class="nav-link" href="about.php">À propos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link" href="contact.php">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -69,7 +69,7 @@
                     <span class="banner-content">
                         <h3>Languages & Cultural Learning</h3>
                         <p>Maîtrisez les langues étrangères avec nos experts.</p>
-                        <a class="btn btn-style mt-sm-5 mt-4" href="about.html">En savoir plus</a>
+                        <a class="btn btn-style mt-sm-5 mt-4" href="about.php">En savoir plus</a>
                     </span>
                 </span>
             </div>
@@ -78,7 +78,7 @@
                     <span class="banner-content">
                         <h3 class="mb-2">Votre Avenir International</h3>
                         <p>Assistance visa et accompagnement universitaire.</p>
-                        <a class="btn btn-style mt-sm-5 mt-4" href="about.html">Découvrir</a>
+                        <a class="btn btn-style mt-sm-5 mt-4" href="about.php">Découvrir</a>
                     </span>
                 </span>
             </div>
@@ -87,7 +87,7 @@
                     <span class="banner-content">
                         <h3>Traduction & Interprétariat</h3>
                         <p>Services professionnels de traduction et interprétariat.</p>
-                        <a class="btn btn-style mt-sm-5 mt-4" href="contact.html">Contactez-nous</a>
+                        <a class="btn btn-style mt-sm-5 mt-4" href="contact.php">Contactez-nous</a>
                     </span>
                 </span>
             </div>
@@ -96,7 +96,7 @@
                     <span class="banner-content">
                         <h3>Live your Adventure</h3>
                         <p>Take advantage of this amazing exclusive offers.</p>
-                        <a class="btn btn-style mt-sm-5 mt-4" href="about.html">Explore More</a>
+                        <a class="btn btn-style mt-sm-5 mt-4" href="about.php">Explore More</a>
                     </span>
                 </span>
             </div>
@@ -127,7 +127,7 @@
                         <li class="mt-2"><i class="fas fa-check-circle"></i>Traduction et interprétariat</li>
                         <li class="mt-2"><i class="fas fa-check-circle"></i>Préparation aux examens certifiés</li>
                     </ul>
-                    <a href="contact.html" class="btn btn-style mt-5">Nous contacter</a>
+                    <a href="contact.php" class="btn btn-style mt-5">Nous contacter</a>
                 </div>
             </div>
         </div>
@@ -199,7 +199,7 @@
             <div class="row text-center justify-content-center">
                 <div class="col-lg-4 col-md-6 col-sm-10">
                     <div class="bottom-block">
-                        <a href="contact.html" class="d-block">
+                        <a href="contact.php" class="d-block">
                             <i class="fas fa-language"></i>
                             <h3 class="my-3">Cours de Langues</h3>
                             <p class="">Italien, Allemand et Anglais en présentiel et en ligne. Apprentissage avec des experts qualifiés.</p>
@@ -208,7 +208,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-10 mt-md-0 mt-4">
                     <div class="bottom-block">
-                        <a href="contact.html" class="d-block">
+                        <a href="contact.php" class="d-block">
                             <i class="fas fa-passport"></i>
                             <h3 class="my-3">Assistance Visa</h3>
                             <p class="">Accompagnement complet pour vos démarches visa et assistance contrat de travail à l'étranger.</p>
@@ -217,7 +217,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-10 mt-lg-0 mt-4">
                     <div class="bottom-block">
-                        <a href="contact.html" class="d-block">
+                        <a href="contact.php" class="d-block">
                             <i class="fas fa-file-alt"></i>
                             <h3 class="my-3">Traduction & Interprétariat</h3>
                             <p class="">Services professionnels de traduction et d'interprétariat dans plusieurs langues.</p>
@@ -226,7 +226,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-10 mt-4">
                     <div class="bottom-block">
-                        <a href="contact.html" class="d-block">
+                        <a href="contact.php" class="d-block">
                             <i class="fas fa-certificate"></i>
                             <h3 class="my-3">Examens Italien</h3>
                             <p class="">Préparation aux examens italiens : Cert.it, CELI 3, CILS, L2. Formation spécialisée pour la réussite.</p>
@@ -235,7 +235,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-10 mt-4">
                     <div class="bottom-block">
-                        <a href="contact.html" class="d-block">
+                        <a href="contact.php" class="d-block">
                             <i class="fas fa-medal"></i>
                             <h3 class="my-3">Examens Allemand</h3>
                             <p class="">Préparation aux examens allemands : ECL, ÖSD. Coaching personnalisé pour votre certification.</p>
@@ -244,7 +244,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-10 mt-4">
                     <div class="bottom-block">
-                        <a href="contact.html" class="d-block">
+                        <a href="contact.php" class="d-block">
                             <i class="fas fa-briefcase"></i>
                             <h3 class="my-3">Assistance Contrat Travail</h3>
                             <p class="">Accompagnement dans les démarches pour obtenir des contrats de travail à l'étranger.</p>
@@ -442,21 +442,21 @@
                 <div class="col-lg-4 col-md-3 col-6 footer-list-29 mt-md-0 mt-4">
                     <ul>
                         <h6 class="footer-title-29">Nos Services</h6>
-                        <li><a href="about.html">À propos</a></li>
-                        <li><a href="contact.html">Cours de langues</a></li>
-                        <li><a href="contact.html">Assistance Visa</a></li>
-                        <li><a href="contact.html">Traduction & Interprétariat</a></li>
-                        <li><a href="contact.html">Contrat de Travail</a></li>
+                        <li><a href="about.php">À propos</a></li>
+                        <li><a href="contact.php">Cours de langues</a></li>
+                        <li><a href="contact.php">Assistance Visa</a></li>
+                        <li><a href="contact.php">Traduction & Interprétariat</a></li>
+                        <li><a href="contact.php">Contrat de Travail</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4 col-md-3 col-6 ps-lg-5 ps-lg-4 footer-list-29 mt-md-0 mt-4">
                     <ul>
                         <h6 class="footer-title-29">Examens & Formations</h6>
-                        <li><a href="contact.html">Italien (Cert.it, CELI 3, CILS, L2)</a></li>
-                        <li><a href="contact.html">Allemand (ECL, ÖSD)</a></li>
-                        <li><a href="contact.html">Anglais</a></li>
-                        <li><a href="contact.html">Cours en ligne</a></li>
-                        <li><a href="contact.html">Cours présentiel</a></li>
+                        <li><a href="contact.php">Italien (Cert.it, CELI 3, CILS, L2)</a></li>
+                        <li><a href="contact.php">Allemand (ECL, ÖSD)</a></li>
+                        <li><a href="contact.php">Anglais</a></li>
+                        <li><a href="contact.php">Cours en ligne</a></li>
+                        <li><a href="contact.php">Cours présentiel</a></li>
                     </ul>
                 </div>
             </div>

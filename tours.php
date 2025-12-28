@@ -18,7 +18,7 @@
     <header id="site-header" class="fixed-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="index.php">
                     <img src="assets/images/logo.webp" alt="logo de l'entreprise">
                     DFConsulting
                 </a>
@@ -31,16 +31,16 @@
                 <div class="collapse navbar-collapse" id="navbarScroll">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Accueil</a>
+                            <a class="nav-link" href="index.php">Accueil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">À propos</a>
+                            <a class="nav-link" href="about.php">À propos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="tours.html">Formations</a>
+                            <a class="nav-link active" aria-current="page" href="tours.php">Formations</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link" href="contact.php">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -70,7 +70,7 @@
             <div class="container py-xl-5 py-lg-4">
                 <h4 class="inner-text-title font-weight-bold pt-5">Explore the World</h4>
                 <ul class="breadcrumbs-custom-path">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li class="active"><i class="fas fa-angle-right mx-2"></i>Tours</li>
                 </ul>
             </div>
@@ -138,10 +138,10 @@
                 <div class="col-lg-4 col-md-3 col-6 footer-list-29 mt-md-0 mt-4">
                     <ul>
                         <h6 class="footer-title-29">Quick Links</h6>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.php">About Us</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#workwithus">Work with us</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="contact.php">Contact Us</a></li>
                         <li><a href="#rewards">Rewards</a></li>
                     </ul>
                 </div>
