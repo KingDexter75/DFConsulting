@@ -94,8 +94,8 @@
             <div class="slide slide-4">
                 <span class="container">
                     <span class="banner-content">
-                        <h3>Live your Adventure</h3>
-                        <p>Take advantage of this amazing exclusive offers.</p>
+                        <h3>Vivez votre aventure</h3>
+                        <p>Profitez de ces offres exclusives exceptionnelles.</p>
                         <a class="btn btn-style mt-sm-5 mt-4" href="about.php">Explore More</a>
                     </span>
                 </span>
@@ -119,7 +119,7 @@
                         <p>À propos de nous</p>
                         <h3 class="title-style">DFConsulting Language and Travel</h3>
                     </div>
-                    <p class="mt-3">Centre de promotion des langues et cultures étrangères et assistance visa. 
+                    <p class="mt-3">Centre de promotion des langues et cultures étrangères et assistance visa.
                         Nous accompagnons les étudiants dans l'apprentissage des langues étrangères (Italien, Allemand et Anglais).</p>
                     <ul class="mt-4 list-style-lis">
                         <li><i class="fas fa-check-circle"></i>Cours de langue en présentiel et en ligne</li>
@@ -327,7 +327,7 @@
                         <p>Nos Avantages</p>
                         <h3 class="title-style">Pourquoi Choisir DFConsulting!</h3>
                     </div>
-                    <p>Centre spécialisé dans la promotion des langues et cultures étrangères avec une expertise reconnue. 
+                    <p>Centre spécialisé dans la promotion des langues et cultures étrangères avec une expertise reconnue.
                         Nous vous accompagnons dans toutes vos démarches linguistiques et administratives.</p>
                     <div class="two-grids mt-5">
                         <div class="grids_info">
@@ -433,8 +433,8 @@
                 <div class="col-lg-4 col-md-6 footer-list-29">
                     <h6 class="footer-title-29">Nos Centres</h6>
                     <p class="mb-2 pe-xl-5">Douala - Cité des Palmiers (en face du stade Caïman)<br>
-                    Douala - Ndogpassi entrée lycée (en allant à petit bonanjo)<br>
-                    Perugia - Italie
+                        Douala - Ndogpassi entrée lycée (en allant à petit bonanjo)<br>
+                        Perugia - Italie
                     </p>
                     <p class="mb-2">Téléphone : <a href="tel:+237659286033">+237 659 286 033</a></p>
                     <p class="mb-2">Italie : <a href="tel:+393791473768">+39 379 147 3768</a></p>
@@ -473,7 +473,7 @@
     </button>
     <script>
         // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () {
+        window.onscroll = function() {
             scrollFunction()
         };
 
@@ -504,7 +504,7 @@
     <!-- for services carousel slider -->
     <script src="assets/js/owl.carousel.js"></script>
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             $('.owl-three').owlCarousel({
                 loop: true,
                 stagePadding: 20,
@@ -544,7 +544,7 @@
 
     <!-- MENU-JS -->
     <script>
-        $(window).on("scroll", function () {
+        $(window).on("scroll", function() {
             var scroll = $(window).scrollTop();
 
             if (scroll >= 80) {
@@ -555,14 +555,14 @@
         });
 
         //Main navigation Active Class Add Remove
-        $(".navbar-toggler").on("click", function () {
+        $(".navbar-toggler").on("click", function() {
             $("header").toggleClass("active");
         });
-        $(document).on("ready", function () {
+        $(document).on("ready", function() {
             if ($(window).width() > 991) {
                 $("header").removeClass("active");
             }
-            $(window).on("resize", function () {
+            $(window).on("resize", function() {
                 if ($(window).width() > 991) {
                     $("header").removeClass("active");
                 }
@@ -573,8 +573,8 @@
 
     <!-- disable body scroll which navbar is in active -->
     <script>
-        $(function () {
-            $('.navbar-toggler').click(function () {
+        $(function() {
+            $('.navbar-toggler').click(function() {
                 $('body').toggleClass('noscroll');
             })
         });
