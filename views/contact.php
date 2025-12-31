@@ -2,63 +2,12 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DFConsulting - Language and Travel - Contactez-nous</title>
-    <!-- Google fonts -->
-    <link href="//fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <!-- Template CSS Style link -->
-    <link rel="stylesheet" href="assets/css/style-starter.css">
+    <?php include 'views/includes/head.php'; ?>
 </head>
 
 <body>
     <!-- header -->
-    <header id="site-header" class="fixed-top">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="index.php">
-                    <img src="assets/images/logo.webp" alt="logo de l'entreprise">
-                    DFConsulting
-                </a>
-                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
-                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarScroll">
-                    <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.php">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.php">À propos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="contact.php">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- toggle switch for light and dark theme -->
-                <div class="cont-ser-position">
-                    <nav class="navigation">
-                        <div class="theme-switch-wrapper">
-                            <label class="theme-switch" for="checkbox">
-                                <input type="checkbox" id="checkbox">
-                                <div class="mode-container">
-                                    <i class="gg-sun"></i>
-                                    <i class="gg-moon"></i>
-                                </div>
-                            </label>
-                        </div>
-                    </nav>
-                </div>
-                <!-- //toggle switch for light and dark theme -->
-            </nav>
-        </div>
-    </header>
+    <?php include 'views/includes/header.php'; ?>
     <!-- //header -->
 
     <!-- inner banner -->
@@ -170,43 +119,7 @@
     <!-- //contact-form -->
 
     <!-- footer -->
-    <footer class="dex-footer-29-main py-4">
-        <div class="container pt-lg-5 pt-sm-4 pt-2 pb-2">
-            <div class="row footer-top-29 text-center">
-                <div class="col-lg-4 col-md-6 footer-list-29">
-                    <h6 class="footer-title-29">Nos Centres</h6>
-                    <p class="mb-2 pe-xl-5">Douala - Cité des Palmiers (en face du stade Caïman)<br>
-                        Douala - Ndogpassi entrée lycée (en allant à petit bonanjo)<br>
-                        Perugia - Italie
-                    </p>
-                    <p class="mb-2">Téléphone : <a href="tel:+237659286033">+237 659 286 033</a></p>
-                    <p class="mb-2">Italie : <a href="tel:+393791473768">+39 379 147 3768</a></p>
-                </div>
-                <div class="col-lg-4 col-md-3 col-6 footer-list-29 mt-md-0 mt-4">
-                    <ul>
-                        <h6 class="footer-title-29">Nos Services</h6>
-                        <li><a href="about.php">À propos</a></li>
-                        <li><a href="contact.php">Cours de langues</a></li>
-                        <li><a href="contact.php">Assistance Visa</a></li>
-                        <li><a href="contact.php">Traduction & Interprétariat</a></li>
-                        <li><a href="contact.php">Contrat de Travail</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 col-md-3 col-6 ps-lg-5 ps-lg-4 footer-list-29 mt-md-0 mt-4">
-                    <ul>
-                        <h6 class="footer-title-29">Examens & Formations</h6>
-                        <li><a href="contact.php">Italien (Cert.it, CELI 3, CILS, L2)</a></li>
-                        <li><a href="contact.php">Allemand (ECL, ÖSD)</a></li>
-                        <li><a href="contact.php">Anglais</a></li>
-                        <li><a href="contact.php">Cours en ligne</a></li>
-                        <li><a href="contact.php">Cours présentiel</a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- copyright -->
-            <p class="copy-footer-29 text-center mt-5 pt-lg-3">&copy; Dexter Dakleu. All rights reserved</p>
-        </div>
-    </footer>
+    <?php include 'views/includes/footer.php'; ?>
     <!-- //footer -->
 
     <!-- Js scripts -->
@@ -216,7 +129,7 @@
     </button>
     <script>
         // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () {
+        window.onscroll = function() {
             scrollFunction()
         };
 
@@ -247,7 +160,7 @@
 
     <!-- MENU-JS -->
     <script>
-        $(window).on("scroll", function () {
+        $(window).on("scroll", function() {
             var scroll = $(window).scrollTop();
 
             if (scroll >= 80) {
@@ -258,14 +171,14 @@
         });
 
         //Main navigation Active Class Add Remove
-        $(".navbar-toggler").on("click", function () {
+        $(".navbar-toggler").on("click", function() {
             $("header").toggleClass("active");
         });
-        $(document).on("ready", function () {
+        $(document).on("ready", function() {
             if ($(window).width() > 991) {
                 $("header").removeClass("active");
             }
-            $(window).on("resize", function () {
+            $(window).on("resize", function() {
                 if ($(window).width() > 991) {
                     $("header").removeClass("active");
                 }
@@ -276,8 +189,8 @@
 
     <!-- disable body scroll which navbar is in active -->
     <script>
-        $(function () {
-            $('.navbar-toggler').click(function () {
+        $(function() {
+            $('.navbar-toggler').click(function() {
                 $('body').toggleClass('noscroll');
             })
         });
