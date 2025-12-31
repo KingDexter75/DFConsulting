@@ -61,6 +61,42 @@
         </div>
     </div>
 
+    <?php
+    // ===== GESTION DU MESSAGE PHP =====
+    $message = null;
+    $type = null; // success | error
+
+    if (isset($_GET['success'])) {
+        $message = "Compte administrateur creer avec succes";
+        $type = "success";
+    }
+
+    if (isset($_GET['error'])) {
+        $message = "Vous ne disposez pas des droits d'administrateur pour acceder a cette page";
+        $type = "error";
+    }
+    ?>
+
+    <!-- ===== TOAST ===== -->
+    <?php if ($message): ?>
+        <div class="toast toast-top toast-end z-50" id="toast">
+            <div class="alert alert-<?= $type === 'success' ? 'success' : 'error' ?>">
+                <span><?= htmlspecialchars($message) ?></span>
+            </div>
+        </div>
+    <?php endif; ?>
+
+    <!-- ===== SCRIPT JS ===== -->
+    <script>
+        setTimeout(() => {
+            const toast = document.getElementById('toast');
+            if (toast) {
+                toast.classList.add('opacity-0', 'transition-opacity', 'duration-500');
+                setTimeout(() => toast.remove(), 500);
+            }
+        }, 3000);
+    </script>
+
 </body>
 
 </html>
