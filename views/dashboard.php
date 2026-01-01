@@ -31,7 +31,7 @@
             <main class="p-6">
                 <div class="flex justify-between items-center mb-8">
                     <h1 class="text-3xl font-bold">Tableau de Bord</h1>
-                    <div class="badge badge-primary p-4">Bienvenue, Admin</div>
+                    <div class="badge badge-primary p-4">Bienvenue, <?= $_SESSION['admin']['name'] ?></div>
                 </div>
 
                 <!-- Stats Section -->
@@ -141,6 +141,20 @@
 
     </div>
 
+    <?php
+    // ===== GESTION DU MESSAGE PHP =====
+    $message = null;
+    $type = null; // success | error
+
+    if (isset($_GET['success'])) {
+        $message = "Connexion réussie ! Bienvenue dans votre espace d'administration.";
+        $type = "success";
+    }
+
+    ?>
+
+    <!-- ===== TOAST ===== -->
+    <?php include 'views/includes/toast.php'; ?>
 </body>
 
 </html>

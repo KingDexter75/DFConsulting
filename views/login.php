@@ -17,7 +17,7 @@
                 <p class="text-base-content/60 text-center mt-2">Accédez à votre espace d'administration</p>
             </div>
 
-            <form action="index.php">
+            <form action="" method="POST">
                 <div class="form-control w-full">
                     <label class="label">
                         <span class="label-text font-semibold">Adresse Email</span>
@@ -26,7 +26,7 @@
                         <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-base-content/40">
                             <i class="fa-solid fa-envelope"></i>
                         </span>
-                        <input type="email" placeholder="admin@example.com" class="input input-bordered w-full pl-10" required />
+                        <input type="email" name="email" placeholder="admin@example.com" class="input input-bordered w-full pl-10" required />
                     </div>
                 </div>
 
@@ -38,15 +38,12 @@
                         <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-base-content/40">
                             <i class="fa-solid fa-key"></i>
                         </span>
-                        <input type="password" placeholder="••••••••" class="input input-bordered w-full pl-10" required />
+                        <input type="password" name="password" placeholder="••••••••" class="input input-bordered w-full pl-10" required />
                     </div>
-                    <label class="label mt-1">
-                        <a href="#" class="label-text-alt link link-hover text-primary">Mot de passe oublié ?</a>
-                    </label>
                 </div>
 
                 <div class="form-control mt-6">
-                    <button type="submit" class="btn btn-primary w-full text-lg">
+                    <button type="submit" name="login" class="btn btn-primary w-full text-lg">
                         Se connecter
                     </button>
                 </div>
@@ -56,7 +53,7 @@
 
             <div class="text-center">
                 <p class="text-base-content/70">Vous n'avez pas de compte ?</p>
-                <a href="register.php" class="link link-primary font-bold mt-2 inline-block">Créer un compte maintenant</a>
+                <a href="<?=  PATH ?>register" class="link link-primary font-bold mt-2 inline-block">Créer un compte maintenant</a>
             </div>
         </div>
     </div>
@@ -67,7 +64,7 @@
     $type = null; // success | error
 
     if (isset($_GET['success'])) {
-        $message = "Compte administrateur creer avec succes";
+        $message = "Connexion réussie ! Bienvenue dans votre espace d'administration.";
         $type = "success";
     }
 
@@ -78,24 +75,7 @@
     ?>
 
     <!-- ===== TOAST ===== -->
-    <?php if ($message): ?>
-        <div class="toast toast-top toast-end z-50" id="toast">
-            <div class="alert alert-<?= $type === 'success' ? 'success' : 'error' ?>">
-                <span><?= htmlspecialchars($message) ?></span>
-            </div>
-        </div>
-    <?php endif; ?>
-
-    <!-- ===== SCRIPT JS ===== -->
-    <script>
-        setTimeout(() => {
-            const toast = document.getElementById('toast');
-            if (toast) {
-                toast.classList.add('opacity-0', 'transition-opacity', 'duration-500');
-                setTimeout(() => toast.remove(), 500);
-            }
-        }, 3000);
-    </script>
+    <?php include 'views/includes/toast.php'; ?>
 
 </body>
 

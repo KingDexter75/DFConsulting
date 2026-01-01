@@ -15,6 +15,10 @@ define('PATH_REQUIRE', substr($_SERVER['SCRIPT_FILENAME'], 0, -9));
 define('PATH', substr($_SERVER['PHP_SELF'], 0, -9));
 
 
+// UUID GENERATION
+define("UUID", bin2hex(random_bytes(16)));
+
+
 // DATABASE INFORMATION
 define("DATABASE_HOST", "localhost");
 define("DATABASE_NAME", "dftravel");
