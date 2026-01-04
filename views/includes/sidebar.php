@@ -36,17 +36,7 @@
                 <i class="fa-solid fa-comment-dots mr-2"></i> Gestion Avis
             </a>
         </li>
-        <div class="divider">Paramètres</div>
-        <li>
-            <a>
-                <i class="fa-solid fa-user mr-2"></i> Profil
-            </a>
-        </li>
-        <li>
-            <a>
-                <i class="fa-solid fa-gear mr-2"></i> Configuration
-            </a>
-        </li>
+        
         <li class="mt-auto">
             <a href="<?= PATH ?>logout" class="text-error">
                 <i class="fa-solid fa-right-from-bracket mr-2"></i> Déconnexion

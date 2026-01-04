@@ -17,8 +17,10 @@
             <div class="navbar bg-base-100 shadow-sm lg:hidden">
                 <div class="flex-none">
                     <label for="my-drawer-2" class="btn btn-square btn-ghost drawer-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            class="inline-block w-5 h-5 stroke-current">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </label>
                 </div>
@@ -51,11 +53,12 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($blogs as $blog) : ?>
+                                    <?php foreach ($blogs as $blog): ?>
                                         <tr>
                                             <td>
                                                 <div class="avatar">
-                                                    <div class="w-12 rounded"><img src="<?= $blog['imagePath'] ?>" alt="Blog" /></div>
+                                                    <div class="w-12 rounded"><img src="<?= $blog['imagePath'] ?>"
+                                                            alt="Blog" /></div>
                                                 </div>
                                             </td>
                                             <td class="max-w-xs truncate"><?= $blog['title'] ?></td>
@@ -63,8 +66,12 @@
                                             <td><?= $blog['date'] ?></td>
                                             <td>
                                                 <div class="flex gap-2">
-                                                    <label for="edit_blog_modal" class="btn btn-square btn-sm btn-info"><i class="fa-solid fa-pen"></i></label>
-                                                    <a href="<?=  PATH ?>blogs?delete=<?= $blog['idB'] ?>" class="btn btn-square btn-sm btn-error"><i class="fa-solid fa-trash"></i></a>
+                                                    <a href="<?= PATH ?>edit?blog=<?= $blog['idB'] ?>"
+                                                        class="btn btn-square btn-sm btn-info"><i
+                                                            class="fa-solid fa-pen"></i></a>
+                                                    <a href="<?= PATH ?>blogs?delete=<?= $blog['idB'] ?>"
+                                                        class="btn btn-square btn-sm btn-error"><i
+                                                            class="fa-solid fa-trash"></i></a>
                                                 </div>
                                             </td>
                                         </tr>
@@ -89,15 +96,18 @@
                 <h3 class="font-bold text-lg mb-4">Ajouter un nouveau Blog</h3>
                 <div class="form-control w-full mb-4">
                     <label class="label"><span class="label-text">Titre</span></label>
-                    <input type="text" name="title" placeholder="ex: Visa travail pour l'italie" class="input input-bordered w-full" />
+                    <input type="text" name="title" placeholder="ex: Visa travail pour l'italie"
+                        class="input input-bordered w-full" />
                 </div>
                 <div class="form-control w-full mb-4">
                     <label class="label"><span class="label-text">Contenu</span></label>
-                    <textarea class="textarea textarea-bordered h-24" name="content" placeholder="Contenu du blog..."></textarea>
+                    <textarea class="textarea textarea-bordered h-24" name="content"
+                        placeholder="Contenu du blog..."></textarea>
                 </div>
                 <div class="form-control w-full mb-4">
                     <label class="label"><span class="label-text">Image (imagePath)</span></label>
-                    <input type="file" name="image" accept=".jpg, .jpeg, .png" class="file-input file-input-bordered w-full" />
+                    <input type="file" name="image" accept=".jpg, .jpeg, .png"
+                        class="file-input file-input-bordered w-full" />
                 </div>
                 <div class="modal-action">
                     <button type="submit" name="save" class="btn btn-primary">Enregistrer</button>
@@ -109,13 +119,25 @@
 
     <?php
     // ===== GESTION DU MESSAGE PHP =====
+    // On récupère les messages s'ils existent, sinon null
     $message = $_SESSION['message'] ?? null;
-    $type = $_SESSION['type'] ?? null; // success | error
-    
+    $type = $_SESSION['type'] ?? null;
     ?>
 
     <!-- ===== TOAST ===== -->
     <?php include 'views/includes/toast.php'; ?>
+
+    <!-- Script pour appeler le nettoyage de session après la disparition du toast -->
+    <?php if ($message): ?>
+        <script>
+            // Attendre que le toast disparaisse (3000ms dans toast.php + un peu de marge)
+            setTimeout(() =>
+            {
+                // Appel AJAX vers le contrôleur pour supprimer le message de la session
+                fetch('<?= PATH ?>blogs?action=clear_flash');
+            }, 3500); 
+        </script>
+    <?php endif; ?>
 
 </body>
 

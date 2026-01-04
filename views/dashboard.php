@@ -61,9 +61,8 @@
                             <div class="stat-figure text-accent">
                                 <i class="fa-solid fa-users fa-2x"></i>
                             </div>
-                            <div class="stat-title">Visiteurs</div>
-                            <div class="stat-value text-accent">2.6k</div>
-                            <div class="stat-desc">↗︎ 400 (22%)</div>
+                            <div class="stat-title">Comptes Crees</div>
+                            <div class="stat-value text-accent"><?= $totalAdmins ?></div>
                         </div>
                     </div>
                 </div>
@@ -84,11 +83,11 @@
                                     </thead>
                                     <tbody>
                                         <?php foreach ($twoLastBlogs as $blog) : ?>
-                                        <tr>
-                                            <td><?= $blog['title'] ?></td>
-                                            <td><?= $blog['content'] ?></td>
-                                            <td><?= $blog['date'] ?></td>
-                                        </tr>
+                                            <tr>
+                                                <td><?= $blog['title'] ?></td>
+                                                <td><?= $blog['content'] ?></td>
+                                                <td><?= $blog['date'] ?></td>
+                                            </tr>
                                         <?php endforeach; ?>
                                     </tbody>
                                 </table>
@@ -113,11 +112,11 @@
                                     </thead>
                                     <tbody>
                                         <?php foreach ($twoLastReviews as $review) : ?>
-                                        <tr>
-                                            <td><?= $review['name'] ?></td>
-                                            <td><?= $review['message'] ?></td>
-                                            <td><?= $review['dateC'] ?></td>
-                                        </tr>
+                                            <tr>
+                                                <td><?= $review['name'] ?></td>
+                                                <td><?= $review['message'] ?></td>
+                                                <td><?= $review['dateC'] ?></td>
+                                            </tr>
                                         <?php endforeach; ?>
                                     </tbody>
                                 </table>
@@ -135,13 +134,24 @@
 
     <?php
     // ===== GESTION DU MESSAGE PHP =====
+    // On récupère les messages s'ils existent, sinon null
     $message = $_SESSION['message'] ?? null;
-    $type = $_SESSION['type'] ?? null; // success | error
-
+    $type = $_SESSION['type'] ?? null;
     ?>
 
     <!-- ===== TOAST ===== -->
     <?php include 'views/includes/toast.php'; ?>
+
+    <!-- Script pour appeler le nettoyage de session après la disparition du toast -->
+    <?php if ($message): ?>
+        <script>
+            // Attendre que le toast disparaisse (3000ms dans toast.php + un peu de marge)
+            setTimeout(() => {
+                // Appel AJAX vers le contrôleur pour supprimer le message de la session
+                fetch('<?= PATH ?>blogs?action=clear_flash');
+            }, 3500);
+        </script>
+    <?php endif; ?>
 </body>
 
 </html>

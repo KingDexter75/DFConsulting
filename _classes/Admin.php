@@ -92,4 +92,15 @@ class Admin
         $stmt->execute([$email, $password]);
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+
+    // Class to count total admins
+    public static function countAdmins()
+    {
+        global $db;
+        $query = "SELECT COUNT(*) as total FROM admin";
+        $stmt = $db->prepare($query);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $result['total'];
+    }
 }

@@ -60,13 +60,24 @@
 
     <?php
     // ===== GESTION DU MESSAGE PHP =====
+    // On récupère les messages s'ils existent, sinon null
     $message = $_SESSION['message'] ?? null;
-    $type = $_SESSION['type'] ?? null; // success | error
-
+    $type = $_SESSION['type'] ?? null;
     ?>
 
     <!-- ===== TOAST ===== -->
     <?php include 'views/includes/toast.php'; ?>
+
+    <!-- Script pour appeler le nettoyage de session après la disparition du toast -->
+    <?php if ($message): ?>
+        <script>
+            // Attendre que le toast disparaisse (3000ms dans toast.php + un peu de marge)
+            setTimeout(() => {
+                // Appel AJAX vers le contrôleur pour supprimer le message de la session
+                fetch('<?= PATH ?>blogs?action=clear_flash');
+            }, 3500);
+        </script>
+    <?php endif; ?>
 
 </body>
 

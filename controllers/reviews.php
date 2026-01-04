@@ -1,4 +1,12 @@
 <?php
+if (isset($_GET['action']) && $_GET['action'] == 'clear_flash') {
+    // Suppression des messages de la session
+    unset($_SESSION['message']);
+    unset($_SESSION['type']);
+    // On arrête l'exécution ici pour ne pas renvoyer toute la page HTML lors de l'appel AJAX
+    exit();
+}
+
 
 // let's verify if the use submit the form
 if (isset($_POST['save'])) {
@@ -27,7 +35,7 @@ if ($_GET['delete']) {
     $id = str_secur($_GET['delete']);
 
     // delete the blog
-    $delete = Blogs::deleteBlogById($id);
+    $delete = Reviews::deleteReviewsById($id);
     if ($delete) {
         $_SESSION['type'] = "warning";
         $_SESSION['message'] = "Avis supprimé avec succès";
