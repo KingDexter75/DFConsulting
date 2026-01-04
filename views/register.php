@@ -58,17 +58,14 @@
 
     <?php
     // ===== GESTION DU MESSAGE PHP =====
-    $message = null;
-    $type = null; // success | error
-
-    if (isset($_GET['error'])) {
-        $message = "Email deja utilisé.";
-        $type = "error";
-    }
-    ?>
+    $message = $_SESSION['message'] ?? null;
+    $type = $_SESSION['type'] ?? null; // success | error
     
+    ?>
+
     <!-- ===== TOAST ===== -->
     <?php include 'views/includes/toast.php'; ?>
+
 
 </body>
 

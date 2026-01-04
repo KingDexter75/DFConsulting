@@ -53,25 +53,16 @@
 
             <div class="text-center">
                 <p class="text-base-content/70">Vous n'avez pas de compte ?</p>
-                <a href="<?=  PATH ?>register" class="link link-primary font-bold mt-2 inline-block">Créer un compte maintenant</a>
+                <a href="<?= PATH ?>register" class="link link-primary font-bold mt-2 inline-block">Créer un compte maintenant</a>
             </div>
         </div>
     </div>
 
     <?php
     // ===== GESTION DU MESSAGE PHP =====
-    $message = null;
-    $type = null; // success | error
+    $message = $_SESSION['message'] ?? null;
+    $type = $_SESSION['type'] ?? null; // success | error
 
-    if (isset($_GET['success'])) {
-        $message = "Connexion réussie ! Bienvenue dans votre espace d'administration.";
-        $type = "success";
-    }
-
-    if (isset($_GET['error'])) {
-        $message = "Vous ne disposez pas des droits d'administrateur pour acceder a cette page";
-        $type = "error";
-    }
     ?>
 
     <!-- ===== TOAST ===== -->

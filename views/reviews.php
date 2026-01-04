@@ -11,7 +11,7 @@
 
         <!-- Sidebar -->
         <?php include 'views/includes/sidebar.php'; ?>
-        
+
         <div class="drawer-content flex flex-col">
             <!-- Navbar -->
             <div class="navbar bg-base-100 shadow-sm lg:hidden">
@@ -31,9 +31,9 @@
             <main class="p-6">
                 <div class="flex justify-between items-center mb-8">
                     <h1 class="text-3xl font-bold">Gestion des Avis</h1>
-                    <label for="add_review_modal" class="btn btn-secondary">
+                    <button class="btn btn-secondary" onclick="my_modal_3.showModal()">
                         <i class="fa-solid fa-plus mr-2"></i> Ajouter un Avis
-                    </label>
+                    </button>
                 </div>
 
                 <!-- Reviews Table -->
@@ -43,7 +43,6 @@
                             <table class="table table-zebra">
                                 <thead>
                                     <tr>
-                                        <th>ID (idT)</th>
                                         <th>Nom (name)</th>
                                         <th>Message</th>
                                         <th>Date (dateC)</th>
@@ -51,30 +50,19 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>T-001</td>
-                                        <td>Jean Dupont</td>
-                                        <td class="max-w-xs truncate">Excellent service, je recommande vivement !</td>
-                                        <td>2025-12-31 11:30</td>
-                                        <td>
-                                            <div class="flex gap-2">
-                                                <label for="edit_review_modal" class="btn btn-square btn-sm btn-info"><i class="fa-solid fa-pen"></i></label>
-                                                <button class="btn btn-square btn-sm btn-error"><i class="fa-solid fa-trash"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>T-002</td>
-                                        <td>Marie Curie</td>
-                                        <td class="max-w-xs truncate">L'interface est très intuitive et rapide.</td>
-                                        <td>2025-12-30 09:15</td>
-                                        <td>
-                                            <div class="flex gap-2">
-                                                <label for="edit_review_modal" class="btn btn-square btn-sm btn-info"><i class="fa-solid fa-pen"></i></label>
-                                                <button class="btn btn-square btn-sm btn-error"><i class="fa-solid fa-trash"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                    <?php foreach ($reviews as $review) : ?>
+                                        <tr>
+                                            <td><?= htmlspecialchars($review['name']) ?></td>
+                                            <td class="max-w-xs truncate"><?= htmlspecialchars($review['message']) ?></td>
+                                            <td><?= htmlspecialchars($review['dateC']) ?></td>
+                                            <td>
+                                                <div class="flex gap-2">
+                                                    <label for="edit_review_modal" class="btn btn-square btn-sm btn-info"><i class="fa-solid fa-pen"></i></label>
+                                                    <a href="<?= PATH ?>reviews?delete=<?= $review['idR'] ?>" class="btn btn-square btn-sm btn-error"><i class="fa-solid fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
                                 </tbody>
                             </table>
                         </div>
@@ -88,52 +76,39 @@
     <!-- Modals using Checkbox Hack (No JS) -->
 
     <!-- Add Review Modal -->
-    <input type="checkbox" id="add_review_modal" class="modal-toggle" />
-    <div class="modal" role="dialog">
+    <dialog id="my_modal_3" class="modal">
         <div class="modal-box">
-            <h3 class="font-bold text-lg mb-4">Ajouter un nouvel Avis</h3>
-            <div class="form-control w-full mb-4">
-                <label class="label"><span class="label-text">ID Avis (idT)</span></label>
-                <input type="text" placeholder="ex: T-003" class="input input-bordered w-full" />
-            </div>
-            <div class="form-control w-full mb-4">
-                <label class="label"><span class="label-text">Nom de la personne (name)</span></label>
-                <input type="text" placeholder="Nom complet" class="input input-bordered w-full" />
-            </div>
-            <div class="form-control w-full mb-4">
-                <label class="label"><span class="label-text">Message</span></label>
-                <textarea class="textarea textarea-bordered h-24" placeholder="Message de l'avis..."></textarea>
-            </div>
-            <div class="modal-action">
-                <label for="add_review_modal" class="btn">Annuler</label>
-                <button class="btn btn-secondary">Enregistrer</button>
-            </div>
+            <form method="dialog">
+                <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+            </form>
+            <form action="" method="post" class="w-full" enctype="multipart/form-data">
+                <h3 class="font-bold text-lg mb-4">Ajouter un nouveau Avis</h3>
+                <div class="form-control w-full mb-4">
+                    <label class="label"><span class="label-text">Nom de la personne</span></label>
+                    <input type="text" name="name" placeholder="Ex: Jean Dupont" class="input input-bordered w-full" />
+                </div>
+                <div class="form-control w-full mb-4">
+                    <label class="label"><span class="label-text">Message</span></label>
+                    <textarea class="textarea textarea-bordered h-24" name="message" placeholder="Message ..."></textarea>
+                </div>
+                <div class="modal-action">
+                    <button type="submit" name="save" class="btn btn-primary">Enregistrer</button>
+                </div>
+            </form>
         </div>
-    </div>
+    </dialog>
 
-    <!-- Edit Review Modal -->
-    <input type="checkbox" id="edit_review_modal" class="modal-toggle" />
-    <div class="modal" role="dialog">
-        <div class="modal-box">
-            <h3 class="font-bold text-lg mb-4">Modifier l'Avis</h3>
-            <div class="form-control w-full mb-4">
-                <label class="label"><span class="label-text">ID Avis (idT)</span></label>
-                <input type="text" value="T-001" class="input input-bordered w-full" disabled />
-            </div>
-            <div class="form-control w-full mb-4">
-                <label class="label"><span class="label-text">Nom de la personne (name)</span></label>
-                <input type="text" value="Jean Dupont" class="input input-bordered w-full" />
-            </div>
-            <div class="form-control w-full mb-4">
-                <label class="label"><span class="label-text">Message</span></label>
-                <textarea class="textarea textarea-bordered h-24">Excellent service, je recommande vivement !</textarea>
-            </div>
-            <div class="modal-action">
-                <label for="edit_review_modal" class="btn">Annuler</label>
-                <button class="btn btn-info">Mettre à jour</button>
-            </div>
-        </div>
-    </div>
+
+
+    <?php
+    // ===== GESTION DU MESSAGE PHP =====
+    $message = $_SESSION['message'] ?? null;
+    $type = $_SESSION['type'] ?? null; // success | error
+
+    ?>
+
+    <!-- ===== TOAST ===== -->
+    <?php include 'views/includes/toast.php'; ?>
 
 </body>
 

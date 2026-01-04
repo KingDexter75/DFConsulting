@@ -6,12 +6,18 @@ if (isset($_POST['login'])) {
     if ($admin) {
         if($admin['role'] == 'admin'){
             $_SESSION['admin'] = $admin;
-            header("Location:" . PATH . "dashboard?success=1");
+            $_SESSION['type'] = "success";
+            $_SESSION['message'] = "Connexion reussie.";
+            header("Location:" . PATH . "dashboard");
         } else {
-            header("Location:" . PATH . "login?error=1");
+            $_SESSION['type'] = "error";
+            $_SESSION['message'] = "Vous ne disposez pas des droits adminsitrateur pour acceder a cette page.";
+            header("Location:" . PATH . "login");
         }
     } else {
-        header("Location:" . PATH . "login?error=1");
+        $_SESSION['type'] = "error";
+        $_SESSION['message'] = "Email ou mot de passe incorrect.";
+        header("Location:" . PATH . "login");
     }
     
 }

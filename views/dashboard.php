@@ -42,8 +42,7 @@
                                 <i class="fa-solid fa-newspaper fa-2x"></i>
                             </div>
                             <div class="stat-title">Total Blogs</div>
-                            <div class="stat-value text-primary">24</div>
-                            <div class="stat-desc">2 nouveaux cette semaine</div>
+                            <div class="stat-value text-primary"><?= $totalBlogs ?></div>
                         </div>
                     </div>
 
@@ -53,8 +52,7 @@
                                 <i class="fa-solid fa-comment-dots fa-2x"></i>
                             </div>
                             <div class="stat-title">Avis Clients</div>
-                            <div class="stat-value text-secondary">158</div>
-                            <div class="stat-desc">98% de satisfaction</div>
+                            <div class="stat-value text-secondary"><?= $totalReviews ?></div>
                         </div>
                     </div>
 
@@ -79,27 +77,24 @@
                                 <table class="table table-zebra">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
+                                            <th>title</th>
                                             <th>Contenu</th>
                                             <th>Date</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php foreach ($twoLastBlogs as $blog) : ?>
                                         <tr>
-                                            <td>B-001</td>
-                                            <td>Introduction à DaisyUI...</td>
-                                            <td>31/12/2025</td>
+                                            <td><?= $blog['title'] ?></td>
+                                            <td><?= $blog['content'] ?></td>
+                                            <td><?= $blog['date'] ?></td>
                                         </tr>
-                                        <tr>
-                                            <td>B-002</td>
-                                            <td>Les nouveautés CSS...</td>
-                                            <td>30/12/2025</td>
-                                        </tr>
+                                        <?php endforeach; ?>
                                     </tbody>
                                 </table>
                             </div>
                             <div class="card-actions justify-end mt-4">
-                                <a href="blogs.php" class="btn btn-primary btn-sm">Gérer les blogs</a>
+                                <a href="<?= PATH ?>blogs" class="btn btn-primary btn-sm">Gérer les blogs</a>
                             </div>
                         </div>
                     </div>
@@ -117,21 +112,18 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php foreach ($twoLastReviews as $review) : ?>
                                         <tr>
-                                            <td>Jean Dupont</td>
-                                            <td>Super dashboard !</td>
-                                            <td>31/12/2025</td>
+                                            <td><?= $review['name'] ?></td>
+                                            <td><?= $review['message'] ?></td>
+                                            <td><?= $review['dateC'] ?></td>
                                         </tr>
-                                        <tr>
-                                            <td>Marie Curie</td>
-                                            <td>Très intuitif.</td>
-                                            <td>29/12/2025</td>
-                                        </tr>
+                                        <?php endforeach; ?>
                                     </tbody>
                                 </table>
                             </div>
                             <div class="card-actions justify-end mt-4">
-                                <a href="reviews.php" class="btn btn-secondary btn-sm">Gérer les avis</a>
+                                <a href="<?= PATH ?>reviews" class="btn btn-secondary btn-sm">Gérer les avis</a>
                             </div>
                         </div>
                     </div>
@@ -143,13 +135,8 @@
 
     <?php
     // ===== GESTION DU MESSAGE PHP =====
-    $message = null;
-    $type = null; // success | error
-
-    if (isset($_GET['success'])) {
-        $message = "Connexion réussie ! Bienvenue dans votre espace d'administration.";
-        $type = "success";
-    }
+    $message = $_SESSION['message'] ?? null;
+    $type = $_SESSION['type'] ?? null; // success | error
 
     ?>
 

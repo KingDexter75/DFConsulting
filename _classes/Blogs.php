@@ -14,15 +14,13 @@ class Blogs
     }
 
     // Class to add a blog to database
-    public static function addBlog($id, $title, $content, $imagePath = null)
+    public static function addBlog($id, $title, $content, $imagePath)
     {
         global $db;
         $id = str_secur($id);
         $title = str_secur($title);
         $content = str_secur($content);
-        if ($imagePath == null) {
-            $imagePath = "default.jpg";
-        }
+        $imagePth = str_secur($imagePath);
         $verify = self::titleExists($title);
         if ($verify) {
             return false;
@@ -48,7 +46,7 @@ class Blogs
     {
         global $db;
         $id = str_secur($id);
-        $query = "SELECT * FROM blogs WHERE id = ?";
+        $query = "SELECT * FROM blogs WHERE idB = ?";
         $stmt = $db->prepare($query);
         $stmt->execute([$id]);
         return $stmt->fetch(PDO::FETCH_ASSOC);
@@ -59,8 +57,47 @@ class Blogs
     {
         global $db;
         $id = str_secur($id);
-        $query = "DELETE FROM blogs WHERE id = ?";
+        $query = "DELETE FROM blogs WHERE idB = ?";
         $stmt = $db->prepare($query);
         return $stmt->execute([$id]);
+    }
+
+    // Class to update blog by its ID
+    public static function updateBlogById($id, $title, $content, $imagePath = null)
+    {
+        global $db;
+        $id = str_secur($id);
+        $title = str_secur($title);
+        $content = str_secur($content);
+        if ($imagePath == null) {
+            $query = "UPDATE blogs SET title = ?, content = ? WHERE idB = ?";
+            $stmt = $db->prepare($query);
+            return $stmt->execute([$title, $content, $id]);
+        } else {
+            $query = "UPDATE blogs SET title = ?, content = ?, imagePath = ? WHERE idB = ?";
+            $stmt = $db->prepare($query);
+            return $stmt->execute([$title, $content, $imagePath, $id]);
+        }
+    }
+
+    // Class to select the two last blog added
+    public static function getLastTwoBlogs()
+    {
+        global $db;
+        $query = "SELECT * FROM blogs ORDER BY date DESC LIMIT 2";
+        $stmt = $db->prepare($query);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    // Class to count total blogs
+    public static function countBlogs()
+    {
+        global $db;
+        $query = "SELECT COUNT(*) as total FROM blogs";
+        $stmt = $db->prepare($query);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $result['total'];
     }
 }

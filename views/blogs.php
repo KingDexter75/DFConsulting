@@ -64,7 +64,7 @@
                                             <td>
                                                 <div class="flex gap-2">
                                                     <label for="edit_blog_modal" class="btn btn-square btn-sm btn-info"><i class="fa-solid fa-pen"></i></label>
-                                                    <button class="btn btn-square btn-sm btn-error"><i class="fa-solid fa-trash"></i></button>
+                                                    <a href="<?=  PATH ?>blogs?delete=<?= $blog['idB'] ?>" class="btn btn-square btn-sm btn-error"><i class="fa-solid fa-trash"></i></a>
                                                 </div>
                                             </td>
                                         </tr>
@@ -78,8 +78,6 @@
         </div>
 
     </div>
-
-    <!-- Modals using Checkbox Hack (No JS) -->
 
     <!-- Add Blog Modal -->
     <dialog id="my_modal_3" class="modal">
@@ -108,44 +106,12 @@
         </div>
     </dialog>
 
-    <!-- Edit Blog Modal -->
-    <input type="checkbox" id="edit_blog_modal" class="modal-toggle" />
-    <div class="modal" role="dialog">
-        <div class="modal-box">
-            <h3 class="font-bold text-lg mb-4">Modifier le Blog</h3>
-            <div class="form-control w-full mb-4">
-                <label class="label"><span class="label-text">ID Blog (idB)</span></label>
-                <input type="text" value="B-001" class="input input-bordered w-full" disabled />
-            </div>
-            <div class="form-control w-full mb-4">
-                <label class="label"><span class="label-text">Contenu</span></label>
-                <textarea class="textarea textarea-bordered h-24">Découvrez les dernières tendances du web design en 2026...</textarea>
-            </div>
-            <div class="form-control w-full mb-4">
-                <label class="label"><span class="label-text">Image (imagePath)</span></label>
-                <input type="file" class="file-input file-input-bordered w-full" />
-            </div>
-            <div class="modal-action">
-                <label for="edit_blog_modal" class="btn">Annuler</label>
-                <button class="btn btn-info">Mettre à jour</button>
-            </div>
-        </div>
-    </div>
 
     <?php
     // ===== GESTION DU MESSAGE PHP =====
-    $message = null;
-    $type = null; // success | error
-
-    if (isset($_GET['success'])) {
-        $message = "Blog ajouté avec succès !";
-        $type = "success";
-    }
-
-    if (isset($_GET['error'])) {
-        $message = "Erreur lors de l'ajout du blog. Veuillez réessayer.";
-        $type = "error";
-    }
+    $message = $_SESSION['message'] ?? null;
+    $type = $_SESSION['type'] ?? null; // success | error
+    
     ?>
 
     <!-- ===== TOAST ===== -->
