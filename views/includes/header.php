@@ -14,13 +14,13 @@
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
+                        <a class="nav-link active" aria-current="page" href="<?= PATH ?>home">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.php">À propos</a>
+                        <a class="nav-link" href="<?= PATH ?>about">À propos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.php">Contact</a>
+                        <a class="nav-link" href="<?= PATH ?>contact">Contact</a>
                     </li>
                 </ul>
             </div>

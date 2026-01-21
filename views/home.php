@@ -18,7 +18,7 @@
                     <span class="banner-content">
                         <h3>Languages & Cultural Learning</h3>
                         <p>Maîtrisez les langues étrangères avec nos experts.</p>
-                        <a class="btn btn-style mt-sm-5 mt-4" href="about.php">En savoir plus</a>
+                        <a class="btn btn-style mt-sm-5 mt-4" href="<?= PATH ?>about">En savoir plus</a>
                     </span>
                 </span>
             </div>
@@ -27,7 +27,7 @@
                     <span class="banner-content">
                         <h3 class="mb-2">Votre Avenir International</h3>
                         <p>Assistance visa et accompagnement universitaire.</p>
-                        <a class="btn btn-style mt-sm-5 mt-4" href="about.php">Découvrir</a>
+                        <a class="btn btn-style mt-sm-5 mt-4" href="<?= PATH ?>about">Découvrir</a>
                     </span>
                 </span>
             </div>
@@ -36,7 +36,7 @@
                     <span class="banner-content">
                         <h3>Traduction & Interprétariat</h3>
                         <p>Services professionnels de traduction et interprétariat.</p>
-                        <a class="btn btn-style mt-sm-5 mt-4" href="contact.php">Contactez-nous</a>
+                        <a class="btn btn-style mt-sm-5 mt-4" href="<?= PATH ?>contact">Contactez-nous</a>
                     </span>
                 </span>
             </div>
@@ -45,7 +45,7 @@
                     <span class="banner-content">
                         <h3>Vivez votre aventure</h3>
                         <p>Profitez de ces offres exclusives exceptionnelles.</p>
-                        <a class="btn btn-style mt-sm-5 mt-4" href="about.php">Explore More</a>
+                        <a class="btn btn-style mt-sm-5 mt-4" href="<?= PATH ?>about">Explore More</a>
                     </span>
                 </span>
             </div>
@@ -61,7 +61,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5">
-                    <img src="assets/images/about3.jpg" alt="" class="img-fluid radius-image" loading="lazy">
+                    <img src="<?= PATH ?>assets/images/about3.jpg" alt="" class="img-fluid radius-image" loading="lazy">
                 </div>
                 <div class="col-lg-6 ps-xl-5 ps-lg-4 mt-lg-0 mt-5">
                     <div class="title-main">
@@ -268,7 +268,7 @@
         <div class="container pb-lg-5 pb-md-4 pb-2">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <video src="assets/images/about.mp4" class="img-fluid radius-image" loading="lazy" autoplay loop controls muted></video>
+                    <video src="<?= PATH ?>assets/images/about.mp4" class="img-fluid radius-image" loading="lazy" autoplay loop controls muted></video>
                     <!-- <img src="assets/images/about2.webp" alt="" class="img-fluid radius-image" loading="lazy"> -->
                 </div>
                 <div class="col-lg-6 ps-xl-5 ps-lg-4 mt-lg-0 mt-5">
@@ -308,68 +308,28 @@
                 <h3 class="title-style">Embarquez pour l'inattendu</h3>
             </div>
             <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-6">
-                    <div class="blog-grid-1">
-                        <div class="card-header p-0 position-relative">
-                            <a href="#blog" class="zoom d-block">
-                                <img class="card-img-bottom d-block" src="assets/images/blog1.webp" alt="Card image cap" loading="lazy">
-                            </a>
-                            <div class="course-price-badge">Trips</div>
-                        </div>
-                        <div class="card-body course-details">
-                            <div class="course-meta mb-3">
-                                <div class="meta-item course-students">
-                                    <span class="fa fa-calendar"></span>
-                                    <span class="meta-value">Dec 06, 2021</span>
-                                </div>
+                <?php foreach ($blogs as $blog): ?>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="blog-grid-1">
+                            <div class="card-header p-0 position-relative">
+                                <a href="#blog" class="zoom d-block">
+                                    <img class="card-img-bottom d-block" src="<?= PATH ?><?= $blog['imagePath'] ?>" alt="Card image cap" loading="lazy">
+                                </a>
+                                <div class="course-price-badge">Trips</div>
                             </div>
-                            <a href="#blog" class="course-desc">Travel the Most Beautiful Places in the
-                                World</a>
-                            <p class="mt-2">Le monde est une carte, et nous vous donnons les clés pour en écrire votre histoire</p>
+                            <div class="card-body course-details">
+                                <div class="course-meta mb-3">
+                                    <div class="meta-item course-students">
+                                        <span class="fa fa-calendar"></span>
+                                        <span class="meta-value"><?= $blog['date'] ?>"</span>
+                                    </div>
+                                </div>
+                                <a href="#blog" class="course-desc"><?= $blog['title'] ?>"</a>
+                                <p class="mt-2"><?= $blog['content'] ?>"</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mt-md-0 mt-4">
-                    <div class="blog-grid-1">
-                        <div class="card-header p-0 position-relative">
-                            <a href="#blog" class="zoom d-block">
-                                <img class="card-img-bottom d-block" src="assets/images/blog2.webp" alt="Card image cap" loading="lazy">
-                            </a>
-                            <div class="course-price-badge">Travels</div>
-                        </div>
-                        <div class="card-body course-details">
-                            <div class="course-meta mb-3">
-                                <div class="meta-item course-students">
-                                    <span class="fa fa-calendar"></span>
-                                    <span class="meta-value">Dec 07, 2021</span>
-                                </div>
-                            </div>
-                            <a href="#blog" class="course-desc">A Place where Start New Life with Peace</a>
-                            <p class="mt-2">Oubliez vos soucis, votre prochaine aventure inoubliable commence ici !</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mt-lg-0 mt-4">
-                    <div class="blog-grid-1">
-                        <div class="card-header p-0 position-relative">
-                            <a href="#blog" class="zoom d-block">
-                                <img class="card-img-bottom d-block" src="assets/images/blog3.webp" alt="Card image cap" loading="lazy">
-                            </a>
-                            <div class="course-price-badge">Journey</div>
-                        </div>
-                        <div class="card-body course-details">
-                            <div class="course-meta mb-3">
-                                <div class="meta-item course-students">
-                                    <span class="fa fa-calendar"></span>
-                                    <span class="meta-value">Dec 08, 2021</span>
-                                </div>
-                            </div>
-                            <a href="#blog" class="course-desc">Top 10 Destinations & Adventure Trips</a>
-                            <p class="mt-2">Lorem ipsum dolor sit, amet consectetur elit. Earum mollitia
-                                ipsam autem.</p>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>

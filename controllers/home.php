@@ -1,0 +1,2 @@
+<?php
+    $blogs = Blogs::getAllBlogs();

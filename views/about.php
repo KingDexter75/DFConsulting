@@ -29,7 +29,7 @@
         <div class="container py-lg-5 py-md-4 py-2">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <img src="assets/images/about3.jpg" class="img-fluid radius-image" alt="">
+                    <img src="<?= PATH ?>assets/images/about3.jpg" class="img-fluid radius-image" alt="">
                 </div>
                 <div class="col-lg-6 ps-lg-5 mt-lg-0 mt-4">
                     <div class="title-main">
@@ -113,7 +113,7 @@
                 <div class="col-lg-3 col-6">
                     <div class="team-member">
                         <div class="team-img">
-                            <img src="assets/images/team1.webp" alt="" class="radius-image">
+                            <img src="<?= PATH ?>assets/images/team1.webp" alt="" class="radius-image">
                         </div>
                         <a href="#url" class="team-title">DF Consulting Staff</a>
                     </div>
@@ -121,7 +121,7 @@
                 <div class="col-lg-3 col-6">
                     <div class="team-member">
                         <div class="team-img">
-                            <img src="assets/images/team2.webp" alt="" class="radius-image">
+                            <img src="<?= PATH ?>assets/images/team2.webp" alt="" class="radius-image">
                         </div>
                         <a href="#url" class="team-title">DF Consulting Staff</a>
                     </div>
@@ -129,7 +129,7 @@
                 <div class="col-lg-3 col-6 mt-lg-0 mt-4">
                     <div class="team-member">
                         <div class="team-img">
-                            <img src="assets/images/team3.webp" alt="" class="radius-image">
+                            <img src="<?= PATH ?>assets/images/team3.webp" alt="" class="radius-image">
                         </div>
                         <a href="#url" class="team-title">DF Consulting Staff</a>
                     </div>
@@ -137,7 +137,7 @@
                 <div class="col-lg-3 col-6 mt-lg-0 mt-4">
                     <div class="team-member">
                         <div class="team-img">
-                            <img src="assets/images/team4.webp" alt="" class="radius-image">
+                            <img src="<?= PATH ?>assets/images/team4.webp" alt="" class="radius-image">
                         </div>
                         <a href="#url" class="team-title">DF Consulting Staff</a>
                     </div>
@@ -145,7 +145,7 @@
                 <div class="col-lg-3 col-6 mt-4">
                     <div class="team-member">
                         <div class="team-img">
-                            <img src="assets/images/team5.webp" alt="" class="radius-image">
+                            <img src="<?= PATH ?>assets/images/team5.webp" alt="" class="radius-image">
                         </div>
                         <a href="#url" class="team-title">DF Consulting Staff</a>
                     </div>
@@ -160,7 +160,7 @@
         <div class="container pb-lg-5 pb-md-4 pb-2">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <img src="assets/images/about2.jpeg" alt="" class="img-fluid radius-image">
+                    <img src="<?= PATH ?>assets/images/about2.jpeg" alt="" class="img-fluid radius-image">
                 </div>
                 <div class="col-lg-6 ps-xl-5 ps-lg-4 mt-lg-0 mt-5">
                     <div class="title-main mb-4" style="max-width:600px;">
@@ -218,7 +218,7 @@
                         </div>
                         <div class="bottom-info mt-4">
                             <a class="comment-img" href="#url">
-                                <img src="assets/images/testi1.webp" class="img-responsive" alt="placeholder image"></a>
+                                <img src="<?= PATH ?>assets/images/testi1.webp" class="img-responsive" alt="placeholder image"></a>
                             <div class="people-info align-self">
                                 <h3>Johnson william</h3>
                                 <p class="identity">Subtitle</p>
@@ -237,7 +237,7 @@
                         </div>
                         <div class="bottom-info mt-4">
                             <a class="comment-img" href="#url">
-                                <img src="assets/images/testi2.webp" class="img-responsive" alt="placeholder image"></a>
+                                <img src="<?= PATH ?>assets/images/testi2.webp" class="img-responsive" alt="placeholder image"></a>
                             <div class="people-info align-self">
                                 <h3>Alexander sakura</h3>
                                 <p class="identity">Subtitle</p>
@@ -256,7 +256,7 @@
                         </div>
                         <div class="bottom-info mt-4">
                             <a class="comment-img" href="#url">
-                                <img src="assets/images/testi3.webp" class="img-responsive" alt="placeholder image"></a>
+                                <img src="<?= PATH ?>assets/images/testi3.webp" class="img-responsive" alt="placeholder image"></a>
                             <div class="people-info align-self">
                                 <h3>John wilson</h3>
                                 <p class="identity">Subtitle</p>
@@ -274,7 +274,7 @@
                                 faucibus orci luctus et ultrices posuere,tesque libero ut justo Semper.</p>
                         </div>
                         <div class="bottom-info mt-4">
-                            <a class="comment-img" href="#url"><img src="assets/images/testi1.webp"
+                            <a class="comment-img" href="#url"><img src="<?= PATH ?>assets/images/testi1.webp"
                                     class="img-responsive" alt="placeholder image"></a>
                             <div class="people-info align-self">
                                 <h3>Julia sakura</h3>
@@ -293,7 +293,7 @@
                                 faucibus orci luctus et ultrices posuere,tesque libero ut justo Semper.</p>
                         </div>
                         <div class="bottom-info mt-4">
-                            <a class="comment-img" href="#url"><img src="assets/images/testi2.webp"
+                            <a class="comment-img" href="#url"><img src="<?= PATH ?>assets/images/testi2.webp"
                                     class="img-responsive" alt="placeholder image"></a>
                             <div class="people-info align-self">
                                 <h3>John wilson</h3>
@@ -312,7 +312,7 @@
                                 faucibus orci luctus et ultrices posuere,tesque libero ut justo Semper.</p>
                         </div>
                         <div class="bottom-info mt-4">
-                            <a class="comment-img" href="#url"><img src="assets/images/testi3.webp"
+                            <a class="comment-img" href="#url"><img src="<?= PATH ?>assets/images/testi3.webp"
                                     class="img-responsive" alt="placeholder image"></a>
                             <div class="people-info align-self">
                                 <h3>Julia sakura</h3>

@@ -1,5 +1,9 @@
 <?php
 
+if (!isset($_SESSION['admin'])) {
+    header("location: " . PATH . "home");
+}
+
 if (isset($_GET['action']) && $_GET['action'] == 'clear_flash') {
     // Suppression des messages de la session
     unset($_SESSION['message']);
