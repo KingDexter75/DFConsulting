@@ -1,0 +1,3 @@
+<?php
+    $testimonials = Reviews::getAllReviews();
+    

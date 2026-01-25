@@ -207,120 +207,25 @@
                 <h3 class="title-style mt-2">Ce que disent nos clients</h3>
             </div>
             <div id="owl-demo2" class="owl-carousel owl-theme mt-4 py-md-2 mb-md-4">
+                <?php foreach ($testimonials as $testimonial) : ?>
                 <div class="item">
                     <div class="testimonial-content">
                         <div class="testimonial">
                             <blockquote>
-                                <i class="fas fa-quote-left"></i> Pellen tesque libero ut justo
+                                <i class="fas fa-quote-left"></i> <?= date('d-M-Y', strtotime($testimonial['dateC'])); ?>
                             </blockquote>
-                            <p>Lorem ipsum dolor sit amet elit. hic odio tenetur. ante ipsum primis in
-                                faucibus orci luctus et ultrices posuere,tesque libero ut justo Semper.</p>
+                            <p><?= $testimonial['message']; ?></p>
                         </div>
                         <div class="bottom-info mt-4">
                             <a class="comment-img" href="#url">
-                                <img src="<?= PATH ?>assets/images/testi1.webp" class="img-responsive" alt="placeholder image"></a>
+                                <img src="<?= PATH ?>assets/images/logo.webp" class="img-responsive" alt="placeholder image"></a>
                             <div class="people-info align-self">
-                                <h3>Johnson william</h3>
-                                <p class="identity">Subtitle</p>
+                                <h3><?= $testimonial['name']; ?></h3>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="item">
-                    <div class="testimonial-content">
-                        <div class="testimonial">
-                            <blockquote>
-                                <i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet
-                            </blockquote>
-                            <p>Lorem ipsum dolor sit amet elit. hic odio tenetur. ante ipsum primis in
-                                faucibus orci luctus et ultrices posuere,tesque libero ut justo Semper.</p>
-                        </div>
-                        <div class="bottom-info mt-4">
-                            <a class="comment-img" href="#url">
-                                <img src="<?= PATH ?>assets/images/testi2.webp" class="img-responsive" alt="placeholder image"></a>
-                            <div class="people-info align-self">
-                                <h3>Alexander sakura</h3>
-                                <p class="identity">Subtitle</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="testimonial-content">
-                        <div class="testimonial">
-                            <blockquote>
-                                <i class="fas fa-quote-left"></i> Pellen tesque libero ut justo
-                            </blockquote>
-                            <p>Lorem ipsum dolor sit amet elit. hic odio tenetur. ante ipsum primis in
-                                faucibus orci luctus et ultrices posuere,tesque libero ut justo Semper.</p>
-                        </div>
-                        <div class="bottom-info mt-4">
-                            <a class="comment-img" href="#url">
-                                <img src="<?= PATH ?>assets/images/testi3.webp" class="img-responsive" alt="placeholder image"></a>
-                            <div class="people-info align-self">
-                                <h3>John wilson</h3>
-                                <p class="identity">Subtitle</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="testimonial-content">
-                        <div class="testimonial">
-                            <blockquote>
-                                <i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet
-                            </blockquote>
-                            <p>Lorem ipsum dolor sit amet elit. hic odio tenetur. ante ipsum primis in
-                                faucibus orci luctus et ultrices posuere,tesque libero ut justo Semper.</p>
-                        </div>
-                        <div class="bottom-info mt-4">
-                            <a class="comment-img" href="#url"><img src="<?= PATH ?>assets/images/testi1.webp"
-                                    class="img-responsive" alt="placeholder image"></a>
-                            <div class="people-info align-self">
-                                <h3>Julia sakura</h3>
-                                <p class="identity">Subtitle</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="testimonial-content">
-                        <div class="testimonial">
-                            <blockquote>
-                                <i class="fas fa-quote-left"></i> Pellen tesque libero ut justo
-                            </blockquote>
-                            <p>Lorem ipsum dolor sit amet elit. hic odio tenetur. ante ipsum primis in
-                                faucibus orci luctus et ultrices posuere,tesque libero ut justo Semper.</p>
-                        </div>
-                        <div class="bottom-info mt-4">
-                            <a class="comment-img" href="#url"><img src="<?= PATH ?>assets/images/testi2.webp"
-                                    class="img-responsive" alt="placeholder image"></a>
-                            <div class="people-info align-self">
-                                <h3>John wilson</h3>
-                                <p class="identity">Subtitle</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="testimonial-content">
-                        <div class="testimonial">
-                            <blockquote>
-                                <i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet
-                            </blockquote>
-                            <p>Lorem ipsum dolor sit amet elit. hic odio tenetur. ante ipsum primis in
-                                faucibus orci luctus et ultrices posuere,tesque libero ut justo Semper.</p>
-                        </div>
-                        <div class="bottom-info mt-4">
-                            <a class="comment-img" href="#url"><img src="<?= PATH ?>assets/images/testi3.webp"
-                                    class="img-responsive" alt="placeholder image"></a>
-                            <div class="people-info align-self">
-                                <h3>Julia sakura</h3>
-                                <p class="identity">Subtitle</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>
