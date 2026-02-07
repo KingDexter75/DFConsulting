@@ -16,8 +16,8 @@
             <div class="slide slide-1">
                 <span class="container">
                     <span class="banner-content">
-                        <h3>Languages & Cultural Learning</h3>
-                        <p>Maîtrisez les langues étrangères avec nos experts.</p>
+                        <h3>Languages & Travel Sarl</h3>
+                        <p>Centre de formation des langues et cultures etrangères en afrique et en europe.</p>
                         <a class="btn btn-style mt-sm-5 mt-4" href="<?= PATH ?>about">En savoir plus</a>
                     </span>
                 </span>
@@ -68,8 +68,19 @@
                         <p>À propos de nous</p>
                         <h3 class="title-style">DFConsulting Language and Travel</h3>
                     </div>
-                    <p class="mt-3">Centre de promotion des langues et cultures étrangères et assistance visa.
-                        Nous accompagnons les étudiants dans l'apprentissage des langues étrangères (Italien, Allemand et Anglais).</p>
+                    <p class="mt-3">
+                        Centre de promotion des langues et cultures étrangères en afrique et en europe.
+                        Saisissez l'opportunité de continuer vos études en italie et en allemagne en
+                        <?php
+                        // Définir le fuseau horaire sur celui du Cameroun
+                        date_default_timezone_set('Africa/Douala');
+
+                        $date_cameroun = date('Y');
+                        $date_prochain = $date_cameroun + 1;
+
+                        echo "$date_cameroun - $date_prochain";
+                        ?>
+                    </p>
                     <ul class="mt-4 list-style-lis">
                         <li><i class="fas fa-check-circle"></i>Cours de langue en présentiel et en ligne</li>
                         <li class="mt-2"><i class="fas fa-check-circle"></i>Assistance Visa professionnelle</li>
@@ -150,7 +161,7 @@
                     <div class="bottom-block">
                         <a href="contact.php" class="d-block">
                             <i class="fas fa-language"></i>
-                            <h3 class="my-3">Cours de Langues</h3>
+                            <h3 class="my-3">Cours de Langue-italien A1-C2</h3>
                             <p class="">Italien, Allemand et Anglais en présentiel et en ligne. Apprentissage avec des experts qualifiés.</p>
                         </a>
                     </div>
@@ -205,6 +216,35 @@
     </section>
     <!-- //services section -->
 
+    <!-- Flyer section -->
+    <section class="w3_stats py-5" id="stats" style="min-height: 100vh;">
+        <div class="container py-lg-5 py-md-4 py-2">
+            <div class="w3-stats text-center py-lg-4">
+                <!-- Utilisation d'une ligne flex avec direction colonne -->
+                <div class="row d-flex flex-column align-items-center">
+
+                    <!-- Image 1 -->
+                    <div class="col-12 mb-4">
+                        <img src="<?= PATH ?>assets/images/flyer1.jpeg"
+                            class="img-fluid"
+                            style="max-height: 350vh; width: auto; object-fit: contain;"
+                            alt="Flyer 1">
+                    </div>
+
+                    <!-- Image 2 -->
+                    <div class="col-12">
+                        <img src="<?= PATH ?>assets/images/flyer2.jpeg"
+                            class="img-fluid"
+                            style="max-height: 350vh; width: auto; object-fit: contain;"
+                            alt="Flyer 2">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //Flyer section -->
+
     <!-- centres section -->
     <section class="dex-centres py-5">
         <div class="container py-lg-5 py-md-4 py-2">
@@ -218,7 +258,7 @@
                         <div class="centre-info">
                             <i class="fas fa-map-marker-alt mb-3" style="font-size: 2.5rem; color: #007bff;"></i>
                             <h4 class="mb-3">Perugia, Italie</h4>
-                            <p class="text-muted mb-2">Centre principal européen</p>
+                            <p class="text-muted mb-2">Situé in VIA FRANCESCO DE SANCTIS, PG</p>
                             <p class="mb-2"><strong>Spécialités :</strong></p>
                             <ul class="list-unstyled">
                                 <li>• Cours d'italien intensifs</li>
@@ -233,7 +273,7 @@
                         <div class="centre-info">
                             <i class="fas fa-map-marker-alt mb-3" style="font-size: 2.5rem; color: #007bff;"></i>
                             <h4 class="mb-3">Douala - Cité des Palmiers</h4>
-                            <p class="text-muted mb-2">En face du stade Caïman</p>
+                            <p class="text-muted mb-2">situé derrière le lycée de lq citée des palmiers à côté du stade Caïman à l'immeuble en carreau bleu blanc</p>
                             <p class="mb-2"><strong>Services :</strong></p>
                             <ul class="list-unstyled">
                                 <li>• Cours présentiel et en ligne</li>
@@ -247,8 +287,8 @@
                     <div class="bottom-block">
                         <div class="centre-info">
                             <i class="fas fa-map-marker-alt mb-3" style="font-size: 2.5rem; color: #007bff;"></i>
-                            <h4 class="mb-3">Douala - Ndogpassi</h4>
-                            <p class="text-muted mb-2">Entrée lycée (en allant à petit bonanjo)</p>
+                            <h4 class="mb-3">Douala - Ndogpassi Entrée Lycée</h4>
+                            <p class="text-muted mb-2">situé à l'entrée du lycée en allant à petit bonanjo après l'église la communauté des enfants benis</p>
                             <p class="mb-2"><strong>Services :</strong></p>
                             <ul class="list-unstyled">
                                 <li>• Préparation examens</li>

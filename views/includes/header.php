@@ -14,13 +14,25 @@
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="<?= PATH ?>home">Accueil</a>
+                        <a class="nav-link <?php
+                                            if (isset($_GET['page']) && $_GET['page'] === 'home') {
+                                                echo 'active';
+                                            }
+                                            ?>" aria-current="page" href="<?= PATH ?>home">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= PATH ?>about">À propos</a>
+                        <a class="nav-link <?php
+                                            if (isset($_GET['page']) && $_GET['page'] === 'about') {
+                                                echo 'active';
+                                            }
+                                            ?>" href="<?= PATH ?>about">À propos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= PATH ?>contact">Contact</a>
+                        <a class="nav-link <?php
+                                            if (isset($_GET['page']) && $_GET['page'] === 'contact') {
+                                                echo 'active';
+                                            }
+                                            ?>" href="<?= PATH ?>contact">Contact</a>
                     </li>
                 </ul>
             </div>
