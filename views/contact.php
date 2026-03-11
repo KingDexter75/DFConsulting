@@ -89,7 +89,7 @@
             <div class="container py-lg-3">
                 <div class="title-main text-center mx-auto mb-md-5 mb-4" style="max-width:600px;">
                     <p>Envoyez-nous un message</p>
-                    <h3 class="title-style">Contactez DFConsulting</h3>
+                    <h3 class="title-style mt-4">Contactez DFConsulting</h3>
                 </div>
                 <div class="top-map">
                     <div class="map-content-9">

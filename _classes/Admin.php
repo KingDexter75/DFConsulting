@@ -1,6 +1,29 @@
 <?php
 class Admin
 {
+    // Vérifie et crée l'admin par défaut si absent
+    public static function checkAndCreateDefaultAdmin()
+    {
+        global $db;
+        $email = 'admin@dftravel.com';
+
+        $stmt = $db->prepare("SELECT COUNT(*) FROM admin WHERE email = :email");
+        $stmt->execute(['email' => $email]);
+        $exists = $stmt->fetchColumn();
+
+        if (!$exists) {
+            $id = UUID;
+            $password = md5('Admin@dftravel123');
+            $stmt = $db->prepare("INSERT INTO admin (idA, name, email, password, role) VALUES (:id, :name, :email, :password, :role)");
+            $stmt->execute([
+                'id' => $id,
+                'name' => 'Admin Dftravel', // Nom par défaut, modifiable
+                'email' => $email,
+                'password' => $password,
+                'role' => 'admin'
+            ]);
+        }
+    }
 
     // Class to check if email exists
     public static function emailExists($email)
@@ -16,6 +39,9 @@ class Admin
     // Class to add admin to database
     public static function addAdmin($id, $name, $email, $password)
     {
+        // verifions si l'administrateur par defaut a ete creer si c'est n'est pas le cas alors ajoutons le a notre base de donnees
+        self::checkAndCreateDefaultAdmin();
+
         global $db;
         $id = str_secur($id);
         $name = str_secur($name);
