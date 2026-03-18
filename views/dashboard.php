@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="synthwave">
+<html lang="fr" data-theme="white">
 
 <head>
     <?php include 'views/includes/head_dashboard.php'; ?>

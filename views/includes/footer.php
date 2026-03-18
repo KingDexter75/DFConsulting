@@ -7,7 +7,7 @@
                     Douala - Ndogpassi entrée lycée (en allant à petit bonanjo)<br>
                     Perugia - Italie
                 </p>
-                <p class="mb-2">Téléphone : <a href="tel:+237659286033">+237 659 286 033</a></p>
+                <p class="mb-2">Téléphone : <a href="https://wa.me/+237659286033?text=Bonjour,%20j'aimerais%20en%20savoir%20plus" target="_blank"><i class="fa-brands fa-whatsapp"></i>+237 659 286 033</a></p>
                 <p class="mb-2">Italie : <a href="tel:+393791473768">+39 379 147 3768</a></p>
             </div>
             <div class="col-lg-4 col-md-3 col-6 footer-list-29 mt-md-0 mt-4">
@@ -23,7 +23,7 @@
             <div class="col-lg-4 col-md-3 col-6 ps-lg-5 ps-lg-4 footer-list-29 mt-md-0 mt-4">
                 <ul>
                     <h6 class="footer-title-29">Examens & Formations</h6>
-                    <li><a href="contact.php">Italien (Cert.it, CELI 3, CILS, L2)</a></li>
+                    <li><a href="contact.php">Italien (Cert.it, CELI 3, CILS, L2, CECLI B2)</a></li>
                     <li><a href="contact.php">Allemand (ECL, ÖSD)</a></li>
                     <li><a href="contact.php">Anglais</a></li>
                     <li><a href="contact.php">Cours en ligne</a></li>

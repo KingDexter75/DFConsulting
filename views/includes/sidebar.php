@@ -36,6 +36,16 @@
                 <i class="fa-solid fa-comment-dots mr-2"></i> Gestion Avis
             </a>
         </li>
+        <li>
+            <a href="<?= PATH ?>reviews"
+                <?php
+                if (isset($_GET['page']) && $_GET['page'] === 'flyer') {
+                    echo 'class="active"';
+                }
+                ?>>
+                <i class="fa-solid fa-book-open-reader"></i> Flyer
+            </a>
+        </li>
         
         <li class="mt-auto">
             <a href="<?= PATH ?>logout" class="text-error">

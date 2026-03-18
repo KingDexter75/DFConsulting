@@ -189,7 +189,7 @@
                         <a href="contact.php" class="d-block">
                             <i class="fas fa-certificate"></i>
                             <h3 class="my-3">Examens Italien</h3>
-                            <p class="">Préparation aux examens italiens : Cert.it, CELI 3, CILS, L2. Formation spécialisée pour la réussite.</p>
+                            <p class="">Préparation aux examens italiens : Cert.it, CELI 3, CILS, L2, CECLI B2. Formation spécialisée pour la réussite.</p>
                         </a>
                     </div>
                 </div>
