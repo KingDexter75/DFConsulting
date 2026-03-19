@@ -202,30 +202,71 @@
     <!-- testimonials section -->
     <section class="dex-clients py-5 mb-5 mt-4" id="testimonials">
         <div class="container py-md-5 py-4">
+            <!-- En-tête de la section -->
             <div class="title-main text-center mx-auto mb-5" style="max-width:600px;">
                 <p class="mt-2">Temoignages</p>
                 <h3 class="title-style mt-2">Ce que disent nos clients</h3>
             </div>
+
+            <!-- Carrousel des témoignages existants (inchangé) -->
             <div id="owl-demo2" class="owl-carousel owl-theme mt-4 py-md-2 mb-md-4">
                 <?php foreach ($testimonials as $testimonial) : ?>
-                <div class="item">
-                    <div class="testimonial-content">
-                        <div class="testimonial">
-                            <blockquote>
-                                <i class="fas fa-quote-left"></i> <?= date('d-M-Y', strtotime($testimonial['dateC'])); ?>
-                            </blockquote>
-                            <p><?= $testimonial['message']; ?></p>
-                        </div>
-                        <div class="bottom-info mt-4">
-                            <a class="comment-img" href="#url">
-                                <img src="<?= PATH ?>assets/images/logo.webp" class="img-responsive" alt="placeholder image"></a>
-                            <div class="people-info align-self">
-                                <h3><?= $testimonial['name']; ?></h3>
+                    <div class="item">
+                        <div class="testimonial-content">
+                            <div class="testimonial">
+                                <blockquote>
+                                    <i class="fas fa-quote-left"></i> <?= date('d-M-Y', strtotime($testimonial['dateC'])); ?>
+                                </blockquote>
+                                <p><?= $testimonial['message']; ?></p>
+                            </div>
+                            <div class="bottom-info mt-4">
+                                <a class="comment-img" href="#url">
+                                    <img src="<?= PATH ?>assets/images/logo.webp" class="img-responsive" alt="placeholder image">
+                                </a>
+                                <div class="people-info align-self">
+                                    <h3><?= $testimonial['name']; ?></h3>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 <?php endforeach; ?>
+            </div>
+
+            <!-- FORMULAIRE D'AJOUT – adapté au style général -->
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-8">
+                    <div class="testimonial-form-wrapper p-4 p-md-5">
+
+                        <!-- Petit titre interne -->
+                        <div class="text-center mb-4">
+                            <h3>Ajouter votre témoignage</h3>
+                            <p class="text-muted" style="font-size: 0.95rem;">Partagez votre expérience avec nous</p>
+                        </div>
+
+                        <!-- Formulaire (envoi en POST vers la même page ou une page de traitement) -->
+                        <form action="" method="POST">
+                            <div class="form-top-left mb-4">
+                                <label for="nom" class="form-label fw-semibold" style="color: #555;">Votre nom</label>
+                                <input type="text" class="form-control form-control-lg" id="nom" name="name"
+                                    placeholder="Ex: Marie Dupont" required
+                                    style="border-radius: 30px; border: 1px solid #ddd; padding: 0.75rem 1.25rem;">
+                            </div>
+
+                            <div class="form-top-left mb-4">
+                                <label for="message" class="form-label fw-semibold" style="color: #555;">Votre témoignage</label>
+                                <textarea class="form-control" id="message" name="message" rows="4"
+                                    placeholder="Ce site est incroyable parce que..." required
+                                    style="border-radius: 20px; border: 1px solid #ddd; padding: 0.75rem 1.25rem;"></textarea>
+                            </div>
+
+                            <div class="text-center text-md-start">
+                                <button type="submit" name="submit" class="btn btn-style btn-primary">
+                                    Ajouter mon témoignage
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -235,6 +276,26 @@
     <?php include 'views/includes/footer.php'; ?>
     <!-- //footer -->
 
+    <?php
+    // ===== GESTION DU MESSAGE PHP =====
+    // On récupère les messages s'ils existent, sinon null
+    $message = $_SESSION['message'] ?? null;
+    $type = $_SESSION['type'] ?? null;
+    ?>
+
+    <!-- ===== TOAST ===== -->
+    <?php include 'views/includes/toast.php'; ?>
+
+    <!-- Script pour appeler le nettoyage de session après la disparition du toast -->
+    <?php if ($message): ?>
+        <script>
+            // Attendre que le toast disparaisse (3000ms dans toast.php + un peu de marge)
+            setTimeout(() => {
+                // Appel AJAX vers le contrôleur pour supprimer le message de la session
+                fetch('<?= PATH ?>blogs?action=clear_flash');
+            }, 3500);
+        </script>
+    <?php endif; ?>
     <!-- Js scripts -->
     <!-- move top -->
     <button onclick="topFunction()" id="movetop" title="Go to top">

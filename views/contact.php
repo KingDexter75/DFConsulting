@@ -49,10 +49,18 @@
                             <div class="icon-box"> <i class="fas fa-mobile-alt"></i></div>
                             <div class="text-box">
                                 <h3 class="mb-2">Appelez-nous</h3>
-                                <p><strong>Cameroun :</strong> <a href="tel:+237659286033">+237 659 286 033</a></p>
-                                <p><strong>Italie :</strong> <a href="tel:+393791473768">+39 379 147 3768</a></p>
+                                <p style="font-size: 20px;" class="mt-4"><strong>Italie :</strong> <a href="tel:+393791473768">+39 379 147 3768</a></p>
+                                <p style="font-size: 20px;" class="mt-4">
+                                    <strong>Cameroun :</strong> <br>
+                                    <a href="https://wa.me/+237659286033?text=Bonjour,%20j'aimerais%20en%20savoir%20plus" target="_blank" style="color: green;">
+                                        <i class="fa-brands fa-whatsapp"></i>+237 659 286 033
+                                    </a>
+                                </p>
                             </div>
                         </div>
+                        <!-- <div class="single-contact-infos center">
+                            <a href="" class="icon-box"><i class="fas fa-whatsapp"></i>+237 659 286 033</a>
+                        </div> -->
                     </div>
                     <div class="col-lg-4 col-md-6 mt-lg-0 mt-4">
                         <div class="single-contact-infos">

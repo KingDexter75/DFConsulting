@@ -14,8 +14,12 @@ if (isset($_POST['submit'])) {
     $password = md5($password);
     $result = Admin::addAdmin($id, $name, $email, $password);
     if ($result) {
-        header("Location:" . PATH . "login?error=1");
+        $_SESSION['type'] = "error";
+        $_SESSION['message'] = "Vous ne disposez pas des privileges necessaires pour la creation du compte";
+        header("Location:" . PATH . "login");
     } else {
-        header("Location:" .PATH. "register?error=1");
+        $_SESSION['type'] = "error";
+        $_SESSION['message'] = "L'email existe deja";
+        header("Location:" . PATH . "register");
     }
 }

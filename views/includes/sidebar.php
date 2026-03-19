@@ -37,7 +37,7 @@
             </a>
         </li>
         <li>
-            <a href="<?= PATH ?>reviews"
+            <a href="<?= PATH ?>flyer"
                 <?php
                 if (isset($_GET['page']) && $_GET['page'] === 'flyer') {
                     echo 'class="active"';
