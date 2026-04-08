@@ -223,21 +223,31 @@
                 <!-- Utilisation d'une ligne flex avec direction colonne -->
                 <div class="row d-flex flex-column align-items-center">
 
+                    <?php foreach($flyers as $flyer): ?>
+                    <div class="col-12 mb-4">
+                        <img src="<?= PATH ?><?= $flyer['image']; ?>"
+                            class="img-fluid"
+                            style="max-height: 350vh; width: auto; object-fit: contain;"
+                            alt="Flyer 1">
+                    </div>
+                    <?php endforeach; ?>
+
                     <!-- Image 1 -->
+                    <!-- Image 2 -->
+                    <!-- 
                     <div class="col-12 mb-4">
                         <img src="<?= PATH ?>assets/images/flyer1.jpeg"
                             class="img-fluid"
                             style="max-height: 350vh; width: auto; object-fit: contain;"
                             alt="Flyer 1">
                     </div>
-
-                    <!-- Image 2 -->
                     <div class="col-12">
                         <img src="<?= PATH ?>assets/images/flyer2.jpeg"
                             class="img-fluid"
                             style="max-height: 350vh; width: auto; object-fit: contain;"
                             alt="Flyer 2">
                     </div>
+                     -->
 
                 </div>
             </div>

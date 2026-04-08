@@ -36,34 +36,53 @@
                     </button>
                 </div>
 
-                <!-- Reviews Table -->
+                <!-- flyers Table -->
                 <div class="card bg-base-100 shadow-xl">
                     <div class="card-body">
                         <div class="overflow-x-auto">
-                            <table class="table table-zebra">
+                            <table class="table">
+                                <!-- head -->
                                 <thead>
                                     <tr>
-                                        <th>Nom (name)</th>
-                                        <th>Message</th>
-                                        <th>Date (dateC)</th>
-                                        <th>Actions</th>
+                                        <th>ID</th>
+                                        <th>Image</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($flyers as $flyer) : ?>
+                                    <?php foreach ($Flyers as $flyer) : ?>
                                         <tr>
-                                            <td><?= htmlspecialchars($review['name']) ?></td>
-                                            <td class="max-w-xs truncate"><?= htmlspecialchars($review['message']) ?></td>
-                                            <td><?= htmlspecialchars($review['dateC']) ?></td>
+                                            <th>
+                                                <?= htmlspecialchars($flyer['idF']) ?>
+                                            </th>
                                             <td>
-                                                <div class="flex gap-2">
-                                                    <a href="<?= PATH ?>edit?review=<?= $review['idR'] ?>"  class="btn btn-square btn-sm btn-info"><i class="fa-solid fa-pen"></i></a>
-                                                    <a href="<?= PATH ?>reviews?delete=<?= $review['idR'] ?>" class="btn btn-square btn-sm btn-error"><i class="fa-solid fa-trash"></i></a>
+                                                <div class="flex items-center gap-3">
+                                                    <div class="avatar">
+                                                        <div class="mask mask-squircle h-12 w-12">
+                                                            <img
+                                                                src="<?= PATH ?><?= htmlspecialchars($flyer['image']) ?>"
+                                                                alt="Flyer<?= htmlspecialchars($flyer['idF']) ?>" />
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </td>
+                                            <th>
+                                                <div class="flex gap-2">
+                                                    <a href="<?= PATH ?>edit?flyer=<?= $flyer['idF'] ?>" class="btn btn-square btn-sm btn-info"><i class="fa-solid fa-pen"></i></a>
+                                                    <a href="<?= PATH ?>flyer?delete=<?= $flyer['idF'] ?>" class="btn btn-square btn-sm btn-error"><i class="fa-solid fa-trash"></i></a>
+                                                </div>
+                                            </th>
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>
+                                <!-- foot -->
+                                <tfoot>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Image</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </tfoot>
                             </table>
                         </div>
                     </div>
@@ -75,21 +94,20 @@
 
     <!-- Modals using Checkbox Hack (No JS) -->
 
-    <!-- Add Review Modal -->
+    <!-- Add flyer Modal -->
     <dialog id="my_modal_3" class="modal">
         <div class="modal-box">
             <form method="dialog">
                 <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
             </form>
             <form action="" method="post" class="w-full" enctype="multipart/form-data">
-                <h3 class="font-bold text-lg mb-4">Ajouter un nouveau Avis</h3>
+                <h3 class="font-bold text-lg mb-4">Ajouter un flyer</h3>
                 <div class="form-control w-full mb-4">
-                    <label class="label"><span class="label-text">Nom de la personne</span></label>
-                    <input type="text" name="name" placeholder="Ex: Jean Dupont" class="input input-bordered w-full" />
-                </div>
-                <div class="form-control w-full mb-4">
-                    <label class="label"><span class="label-text">Message</span></label>
-                    <textarea class="textarea textarea-bordered h-24" name="message" placeholder="Message ..."></textarea>
+                    <fieldset class="fieldset">
+                        <legend class="fieldset-legend">Selectionner une image</legend>
+                        <input type="file" name="image" accept="image/png, image/jpeg, image/webp" class="file-input mt-2" />
+                        <label class="label">Max size 2MB</label>
+                    </fieldset>
                 </div>
                 <div class="modal-action">
                     <button type="submit" name="save" class="btn btn-primary">Enregistrer</button>

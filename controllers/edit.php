@@ -12,27 +12,28 @@ if (isset($_GET['action']) && $_GET['action'] == 'clear_flash') {
     exit();
 }
 
-if(isset($_GET['review'])){
+if (isset($_GET['review'])) {
     $id = str_secur($_GET['review']);
     $review = Reviews::getReviewsById($id);
-}
-else if(isset($_GET['blog'])){
+} else if (isset($_GET['blog'])) {
     $id = str_secur($_GET['blog']);
     $blog = Blogs::getBlogById($id);
-}
-else{
+} else if (isset($_GET['flyer'])) {
+    $id = str_secur($_GET['flyer']);
+    $blog = Flyers::getFlyerById($id);
+} else {
     header('Location: ' . PATH . 'dashboard');
     exit();
 }
 
 
-if(isset($_POST['submit_blog'])){
+if (isset($_POST['submit_blog'])) {
     $idB = $_GET['blog'];
     extract($_POST);
     $image = $_FILES['image'];
 
     // Lets check if the user uploaded a new image
-    if($image['size'] > 0){
+    if ($image['size'] > 0) {
         $directory = "assets/uploads/blogs/";
 
         // Let's get the old blog information
@@ -43,7 +44,66 @@ if(isset($_POST['submit_blog'])){
         // Upload the new image
         $image_path = uploadFichier($image, $directory);
         if ($image_path != false) {
-            $update = Blogs::updateBlogById($id, $title, $content, $image_path);
+            $update = Blogs::updateBlogById($idB, $title, $content, $image_path);
+            if ($update) {
+                // Let's delete the old image
+                unlink($oldImagePath);
+                $_SESSION['message'] = "Le blog a été mis à jour avec succès.";
+                $_SESSION['type'] = "success";
+                header('Location: ' . PATH . 'blogs');
+            } else {
+                $_SESSION['type'] = "error";
+                $_SESSION['message'] = "Erreur lors de la mise à jour du blog. Le titre existe peut-être déjà.";
+                header("Location:" . PATH . "blogs");
+            }
+        } else {
+            $_SESSION['type'] = "error";
+            $_SESSION['message'] = "Erreur lors du téléchargement de l'image.";
+            header("Location:" . PATH . "blogs");
+        }
+    } else {
+        // Let's doing the update in the database
+        $_SESSION['message'] = "Le blog a été mis à jour avec succès.";
+        $_SESSION['type'] = "success";
+        $update = Blogs::updateBlogById($idB, $title, $content);
+        header("Location:" . PATH . "blogs");
+    }
+}
+
+
+if (isset($_POST['submit_review'])) {
+    $idR = $_GET['review'];
+    extract($_POST);
+
+    $update = Reviews::updateReviewsById($idR, $name, $message);
+    if ($update) {
+        $_SESSION['message'] = "L'avis a été mis à jour avec succès.";
+        $_SESSION['type'] = "success";
+        header('Location: ' . PATH . 'reviews');
+    } else {
+        $_SESSION['type'] = "error";
+        $_SESSION['message'] = "Erreur lors de la mise à jour de l'avis.";
+        header("Location:" . PATH . "reviews");
+    }
+}
+
+if (isset($_POST['submit_flyer'])) {
+    $idF = $_GET['flyer'];
+    $image = $_FILES['image'];
+
+    // Lets check if the user uploaded a new image
+    if ($image['size'] > 0) {
+        $directory = "assets/uploads/flyer/";
+
+        // Let's get the old flyer information
+        $olFlyer = Flyers::getFlyerById($idF);
+        $oldImagePath = $olFlyer['image'];
+
+        // Let's doing the update in the database
+        // Upload the new image
+        $image_path = uploadFichier($image, $directory);
+        if ($image_path != false) {
+            $update = Flyers::updateFlyerById($idF, $image_path);
             if ($update) {
                 // Let's delete the old image
                 unlink($oldImagePath);
@@ -63,24 +123,5 @@ if(isset($_POST['submit_blog'])){
     } else {
         // Let's doing the update in the database
         $update = Blogs::updateBlogById($id, $title, $content);
-    }
-
-}
-
-
-if(isset($_POST['submit_review'])){
-    $idR = $_GET['review'];
-    extract($_POST);
-
-    $update = Reviews::updateReviewsById($idR, $name, $message);
-    if($update){
-        $_SESSION['message'] = "L'avis a été mis à jour avec succès.";
-        $_SESSION['type'] = "success";
-        header('Location: ' . PATH . 'reviews');
-    }
-    else{
-        $_SESSION['type'] = "error";
-        $_SESSION['message'] = "Erreur lors de la mise à jour de l'avis.";
-        header("Location:".PATH."reviews");
     }
 }

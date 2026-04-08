@@ -43,7 +43,12 @@
                     <div class="card-body">
 
                         <h2 class="card-title text-2xl mb-4">
-                            Modifier un <?= $title = ($_GET['blog']) ? 'blog' : 'avis' ?>
+                            Modifier un <?= $title = match (true) {
+                                            isset($_GET['blog'])  => 'blog',
+                                            isset($_GET['avis'])  => 'avis',
+                                            isset($_GET['flyer']) => 'flyer',
+                                            default               => 'dashboard',
+                                        }; ?>
                         </h2>
 
                         <?php if (isset($_GET['blog'])) { ?>
@@ -84,7 +89,7 @@
                                 </div>
 
                             </form>
-                        <?php } else { ?>
+                        <?php } else if (isset($_GET['review'])) { ?>
                             <form method="POST" action="" class="space-y-6">
 
                                 <!-- Titre -->
@@ -110,6 +115,26 @@
                                     <a href="<?= PATH ?>reviews" class="btn btn-secondary">Annuler</a>
                                     <button type="submit" name="submit_review" class="btn btn-primary">
                                         Enregistrer l’article
+                                    </button>
+                                </div>
+
+                            </form>
+                        <?php } else { ?>
+                            <form method="POST" action="" class="space-y-6" enctype="multipart/form-data">
+
+                                <!-- Image -->
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text font-semibold">Image</span>
+                                    </label>
+                                    <input type="file" name="image" value="<?= $flyer['image'] ?>" required="required" class="input input-bordered w-full">
+                                </div>
+
+                                <!-- Boutons -->
+                                <div class="flex justify-end gap-4 pt-4">
+                                    <a href="<?= PATH ?>flyer" class="btn btn-secondary">Annuler</a>
+                                    <button type="submit" name="submit_flyer" class="btn btn-primary">
+                                        Modifier
                                     </button>
                                 </div>
 
