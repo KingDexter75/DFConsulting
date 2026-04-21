@@ -3,6 +3,7 @@
 
 <head>
     <?php include 'views/includes/head.php'; ?>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -57,13 +58,13 @@
     <!-- //banner section -->
 
     <!-- about section -->
-    <section class="dex-aboutblock py-lg-5 py-4" id="about">
+    <section class="dex-aboutblock py-lg-5 py-4" id="about" data-aos="fade-up">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-5">
+                <div class="col-lg-5" data-aos="fade-right" data-aos-delay="200">
                     <img src="<?= PATH ?>assets/images/about3.jpg" alt="" class="img-fluid radius-image" loading="lazy">
                 </div>
-                <div class="col-lg-6 ps-xl-5 ps-lg-4 mt-lg-0 mt-5">
+                <div class="col-lg-6 ps-xl-5 ps-lg-4 mt-lg-0 mt-5" data-aos="fade-left" data-aos-delay="300">
                     <div class="title-main">
                         <p>À propos de nous</p>
                         <h3 class="title-style">DFConsulting Language and Travel</h3>
@@ -87,7 +88,7 @@
                         <li class="mt-2"><i class="fas fa-check-circle"></i>Traduction et interprétariat</li>
                         <li class="mt-2"><i class="fas fa-check-circle"></i>Préparation aux examens certifiés</li>
                     </ul>
-                    <a href="contact.php" class="btn btn-style mt-5">Nous contacter</a>
+                    <a href="<?= PATH ?>contact" class="btn btn-style mt-5">Nous contacter</a>
                 </div>
             </div>
         </div>
@@ -95,9 +96,9 @@
     <!-- //about section -->
 
     <!-- stats section -->
-    <section class="w3_stats py-5" id="stats">
+    <section class="w3_stats py-5" id="stats" data-aos="fade-up">
         <div class="container py-lg-5 py-md-4 py-2">
-            <div class="title-main text-center mx-auto mb-5" style="max-width:600px;">
+            <div class="title-main text-center mx-auto mb-5" style="max-width:600px;" data-aos="fade-up" data-aos-delay="100">
                 <p>Nos Résultats</p>
                 <h3 class="title-style text-white">DFConsulting en Chiffres</h3>
             </div>
@@ -150,14 +151,14 @@
     <!-- //stats section -->
 
     <!-- services section -->
-    <section class="dex-grids-block py-5">
+    <section class="dex-grids-block py-5" data-aos="fade-up">
         <div class="container py-lg-5 py-md-4 py-2">
-            <div class="title-main text-center mx-auto mb-md-5 mb-4" style="max-width:600px;">
+            <div class="title-main text-center mx-auto mb-md-5 mb-4" style="max-width:600px;" data-aos="fade-up" data-aos-delay="100">
                 <p>Nos Services</p>
                 <h3 class="title-style">Services Professionnels DFConsulting</h3>
             </div>
             <div class="row text-center justify-content-center">
-                <div class="col-lg-4 col-md-6 col-sm-10">
+                <div class="col-lg-4 col-md-6 col-sm-10" data-aos="fade-up" data-aos-delay="100">
                     <div class="bottom-block">
                         <a href="contact.php" class="d-block">
                             <i class="fas fa-language"></i>
@@ -166,7 +167,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-10 mt-md-0 mt-4">
+                <div class="col-lg-4 col-md-6 col-sm-10 mt-md-0 mt-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="bottom-block">
                         <a href="contact.php" class="d-block">
                             <i class="fas fa-passport"></i>
@@ -175,7 +176,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-10 mt-lg-0 mt-4">
+                <div class="col-lg-4 col-md-6 col-sm-10 mt-lg-0 mt-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="bottom-block">
                         <a href="contact.php" class="d-block">
                             <i class="fas fa-file-alt"></i>
@@ -184,7 +185,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-10 mt-4">
+                <div class="col-lg-4 col-md-6 col-sm-10 mt-4" data-aos="fade-up" data-aos-delay="400">
                     <div class="bottom-block">
                         <a href="contact.php" class="d-block">
                             <i class="fas fa-certificate"></i>
@@ -193,7 +194,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-10 mt-4">
+                <div class="col-lg-4 col-md-6 col-sm-10 mt-4" data-aos="fade-up" data-aos-delay="500">
                     <div class="bottom-block">
                         <a href="contact.php" class="d-block">
                             <i class="fas fa-medal"></i>
@@ -202,7 +203,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-10 mt-4">
+                <div class="col-lg-4 col-md-6 col-sm-10 mt-4" data-aos="fade-up" data-aos-delay="600">
                     <div class="bottom-block">
                         <a href="contact.php" class="d-block">
                             <i class="fas fa-briefcase"></i>
@@ -256,14 +257,14 @@
     <!-- //Flyer section -->
 
     <!-- centres section -->
-    <section class="dex-centres py-5">
+    <section class="dex-centres py-5" data-aos="fade-up">
         <div class="container py-lg-5 py-md-4 py-2">
-            <div class="title-main text-center mx-auto mb-md-5 mb-4" style="max-width:600px;">
+            <div class="title-main text-center mx-auto mb-md-5 mb-4" style="max-width:600px;" data-aos="fade-up" data-aos-delay="100">
                 <p>Nos Implantations</p>
                 <h3 class="title-style">Nos Centres DFConsulting</h3>
             </div>
             <div class="row text-center justify-content-center">
-                <div class="col-lg-4 col-md-6 col-sm-10 mb-4">
+                <div class="col-lg-4 col-md-6 col-sm-10 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="bottom-block">
                         <div class="centre-info">
                             <i class="fas fa-map-marker-alt mb-3" style="font-size: 2.5rem; color: #007bff;"></i>
@@ -278,7 +279,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-10 mb-4">
+                <div class="col-lg-4 col-md-6 col-sm-10 mb-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="bottom-block">
                         <div class="centre-info">
                             <i class="fas fa-map-marker-alt mb-3" style="font-size: 2.5rem; color: #007bff;"></i>
@@ -293,12 +294,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-10 mb-4">
+                <div class="col-lg-4 col-md-6 col-sm-10 mb-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="bottom-block">
                         <div class="centre-info">
                             <i class="fas fa-map-marker-alt mb-3" style="font-size: 2.5rem; color: #007bff;"></i>
                             <h4 class="mb-3">Douala - Ndogpassi Entrée Lycée</h4>
-                            <p class="text-muted mb-2">situé à l'entrée du lycée en allant à petit bonanjo après l'église la communauté des enfants benis</p>
+                            <p class="text-muted mb-2">situé à l'entrée du lycée en allant à petit bonanjo après l'école la communauté des enfants benis</p>
                             <p class="mb-2"><strong>Services :</strong></p>
                             <ul class="list-unstyled">
                                 <li>• Préparation examens</li>
@@ -314,14 +315,14 @@
     <!-- //centres section -->
 
     <!-- why section -->
-    <section class="dex-whyblock pb-5 pt-2">
+    <section class="dex-whyblock pb-5 pt-2" data-aos="fade-up">
         <div class="container pb-lg-5 pb-md-4 pb-2">
             <div class="row align-items-center">
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
                     <video src="<?= PATH ?>assets/images/about.mp4" class="img-fluid radius-image" loading="lazy" autoplay loop controls muted></video>
                     <!-- <img src="assets/images/about2.webp" alt="" class="img-fluid radius-image" loading="lazy"> -->
                 </div>
-                <div class="col-lg-6 ps-xl-5 ps-lg-4 mt-lg-0 mt-5">
+                <div class="col-lg-6 ps-xl-5 ps-lg-4 mt-lg-0 mt-5" data-aos="fade-left" data-aos-delay="300">
                     <div class="title-main mb-4" style="max-width:600px;">
                         <p>Nos Avantages</p>
                         <h3 class="title-style">Pourquoi Choisir DFConsulting!</h3>
@@ -351,15 +352,15 @@
     <!-- //why section -->
 
     <!-- blog section -->
-    <div class="dex-blog-content py-5">
+    <div class="dex-blog-content py-5" data-aos="fade-up">
         <div class="container py-lg-5 py-md-4 py-2">
-            <div class="title-main text-center mx-auto mb-md-5 mb-4" style="max-width:600px;">
+            <div class="title-main text-center mx-auto mb-md-5 mb-4" style="max-width:600px;" data-aos="fade-up" data-aos-delay="100">
                 <p>Notre Blog</p>
                 <h3 class="title-style">Embarquez pour l'inattendu</h3>
             </div>
             <div class="row justify-content-center">
-                <?php foreach ($blogs as $blog): ?>
-                    <div class="col-lg-4 col-md-6">
+                <?php foreach ($blogs as $index => $blog): ?>
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="<?= $index * 100 ?>">
                         <div class="blog-grid-1">
                             <div class="card-header p-0 position-relative">
                                 <a href="#blog" class="zoom d-block">
@@ -388,6 +389,90 @@
     <!-- footer -->
     <?php include 'views/includes/footer.php'; ?>
     <!-- //footer -->
+
+    <!-- Floating Contact Options -->
+    <div class="contact-floating">
+        <div class="contact-options">
+            <a href="https://wa.me/+237659286033?text=Bonjour,%20j'aimerais%20en%20savoir%20plus" target="_blank" class="contact-btn whatsapp" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://web.facebook.com/p/Dfconsulting-language-and-travel-Sarl-61584481056598/?_rdc=1&_rdr#" target="_blank" class="contact-btn facebook" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="mailto:dfconsultinglanguageandtravel@gmail.com" class="contact-btn gmail" title="Gmail">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+237659286033" class="contact-btn call" title="Appeler">
+                <i class="fas fa-phone"></i>
+            </a>
+            <a href="sms:+237659286033" class="contact-btn sms" title="SMS">
+                <i class="fas fa-sms"></i>
+            </a>
+        </div>
+        <button class="contact-toggle" title="Nous contacter">
+            <i class="fas fa-comments"></i>
+        </button>
+    </div>
+    <style>
+        .contact-floating {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .contact-toggle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #007bff;
+            color: white;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+        .contact-toggle:hover {
+            transform: scale(1.1);
+            background: #0056b3;
+        }
+        .contact-options {
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .contact-options.active {
+            display: flex;
+        }
+        .contact-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .contact-btn:hover {
+            transform: scale(1.1);
+        }
+        .contact-btn.whatsapp { background: #25D366; }
+        .contact-btn.facebook { background: #1877F2; }
+        .contact-btn.gmail { background: #DB4437; }
+        .contact-btn.call { background: #28a745; }
+        .contact-btn.sms { background: #6c757d; }
+    </style>
+    <script>
+        document.querySelector('.contact-toggle').addEventListener('click', function() {
+            document.querySelector('.contact-options').classList.toggle('active');
+        });
+    </script>
+    <!-- //Floating Contact Options -->
 
     <!-- Js scripts -->
     <!-- move top -->
@@ -507,6 +592,15 @@
     <!-- bootstrap -->
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- //bootstrap -->
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
     <!-- //Js scripts -->
 </body>
 

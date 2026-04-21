@@ -3,6 +3,7 @@
 
 <head>
     <?php include 'views/includes/head.php'; ?>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -25,13 +26,13 @@
     <!-- //inner banner -->
 
     <!-- about section -->
-    <div class="dex-about-content py-5">
+    <div class="dex-about-content py-5" data-aos="fade-up">
         <div class="container py-lg-5 py-md-4 py-2">
             <div class="row align-items-center">
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
                     <img src="<?= PATH ?>assets/images/about3.jpg" class="img-fluid radius-image" alt="">
                 </div>
-                <div class="col-lg-6 ps-lg-5 mt-lg-0 mt-4">
+                <div class="col-lg-6 ps-lg-5 mt-lg-0 mt-4" data-aos="fade-left" data-aos-delay="300">
                     <div class="title-main">
                         <p>À Propos de Nous</p>
                         <h3 class="title-style mt-2">DFConsulting Language and Travel SARL</h3>
@@ -40,7 +41,7 @@
                         Notre mission principale est d'accompagner les étudiants dans l'apprentissage des langues étrangères (Italien, Allemand et Anglais).</p>
                     <p class="mt-3">Nous offrons une gamme complète de services incluant des cours de langue, l'assistance visa,
                         la traduction et l'interprétariat, ainsi que la préparation aux examens certifiés internationaux.</p>
-                    <a href="contact.php" class="btn btn-style mt-5">Nous Contacter</a>
+                    <a href="<?= PATH ?>contact" class="btn btn-style mt-5">Nous Contacter</a>
                 </div>
             </div>
         </div>
@@ -48,9 +49,9 @@
     <!-- //about section -->
 
     <!-- stats section -->
-    <section class="w3_stats py-5" id="stats">
+    <section class="w3_stats py-5" id="stats" data-aos="fade-up">
         <div class="container py-lg-5 py-md-4 py-2">
-            <div class="title-main text-center mx-auto mb-5" style="max-width:600px;">
+            <div class="title-main text-center mx-auto mb-5" style="max-width:600px;" data-aos="fade-up" data-aos-delay="100">
                 <p>Nos Résultats</p>
                 <h3 class="title-style text-white mt-2">DFConsulting en Chiffres</h3>
             </div>
@@ -103,14 +104,14 @@
     <!-- //stats section -->
 
     <!-- team section -->
-    <section class="dex-team-main py-5" id="team">
+    <section class="dex-team-main py-5" id="team" data-aos="fade-up">
         <div class="container py-lg-5 py-md-4 py-2">
-            <div class="title-main text-center mx-auto mb-md-5 mb-4" style="max-width:600px;">
+            <div class="title-main text-center mx-auto mb-md-5 mb-4" style="max-width:600px;" data-aos="fade-up" data-aos-delay="100">
                 <p>Notre Équipe</p>
                 <h3 class="title-style mt-2">Rencontrez nos Formateurs</h3>
             </div>
             <div class="row text-center">
-                <div class="col-lg-3 col-6">
+                <div class="col-lg-3 col-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="team-member">
                         <div class="team-img">
                             <img src="<?= PATH ?>assets/images/team1.webp" alt="" class="radius-image">
@@ -118,7 +119,7 @@
                         <a href="#url" class="team-title">DF Consulting Staff</a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-6">
+                <div class="col-lg-3 col-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="team-member">
                         <div class="team-img">
                             <img src="<?= PATH ?>assets/images/team2.webp" alt="" class="radius-image">
@@ -126,7 +127,7 @@
                         <a href="#url" class="team-title">DF Consulting Staff</a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-6 mt-lg-0 mt-4">
+                <div class="col-lg-3 col-6 mt-lg-0 mt-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="team-member">
                         <div class="team-img">
                             <img src="<?= PATH ?>assets/images/team3.webp" alt="" class="radius-image">
@@ -134,7 +135,7 @@
                         <a href="#url" class="team-title">DF Consulting Staff</a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-6 mt-lg-0 mt-4">
+                <div class="col-lg-3 col-6 mt-lg-0 mt-4" data-aos="fade-up" data-aos-delay="400">
                     <div class="team-member">
                         <div class="team-img">
                             <img src="<?= PATH ?>assets/images/team4.webp" alt="" class="radius-image">
@@ -142,7 +143,7 @@
                         <a href="#url" class="team-title">DF Consulting Staff</a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-6 mt-4">
+                <div class="col-lg-3 col-6 mt-4" data-aos="fade-up" data-aos-delay="500">
                     <div class="team-member">
                         <div class="team-img">
                             <img src="<?= PATH ?>assets/images/team5.webp" alt="" class="radius-image">
@@ -156,13 +157,13 @@
     <!-- //team section -->
 
     <!-- why section -->
-    <section class="dex-whyblock pb-5 pt-2">
+    <section class="dex-whyblock pb-5 pt-2" data-aos="fade-up">
         <div class="container pb-lg-5 pb-md-4 pb-2">
             <div class="row align-items-center">
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
                     <img src="<?= PATH ?>assets/images/about2.jpeg" alt="" class="img-fluid radius-image">
                 </div>
-                <div class="col-lg-6 ps-xl-5 ps-lg-4 mt-lg-0 mt-5">
+                <div class="col-lg-6 ps-xl-5 ps-lg-4 mt-lg-0 mt-5" data-aos="fade-left" data-aos-delay="300">
                     <div class="title-main mb-4" style="max-width:600px;">
                         <p>Nos Services</p>
                         <h3 class="title-style mt-2">Orientation dans votre Parcours</h3>
@@ -200,10 +201,10 @@
     <!-- //why section -->
 
     <!-- testimonials section -->
-    <section class="dex-clients py-5 mb-5 mt-4" id="testimonials">
+    <section class="dex-clients py-5 mb-5 mt-4" id="testimonials" data-aos="fade-up">
         <div class="container py-md-5 py-4">
             <!-- En-tête de la section -->
-            <div class="title-main text-center mx-auto mb-5" style="max-width:600px;">
+            <div class="title-main text-center mx-auto mb-5" style="max-width:600px;" data-aos="fade-up" data-aos-delay="100">
                 <p class="mt-2">Temoignages</p>
                 <h3 class="title-style mt-2">Ce que disent nos clients</h3>
             </div>
@@ -275,6 +276,90 @@
     <!-- footer -->
     <?php include 'views/includes/footer.php'; ?>
     <!-- //footer -->
+
+    <!-- Floating Contact Options -->
+    <div class="contact-floating">
+        <div class="contact-options">
+            <a href="https://wa.me/+237659286033?text=Bonjour,%20j'aimerais%20en%20savoir%20plus" target="_blank" class="contact-btn whatsapp" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://web.facebook.com/p/Dfconsulting-language-and-travel-Sarl-61584481056598/?_rdc=1&_rdr#" target="_blank" class="contact-btn facebook" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="mailto:dfconsultinglanguageandtravel@gmail.com" class="contact-btn gmail" title="Gmail">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+237659286033" class="contact-btn call" title="Appeler">
+                <i class="fas fa-phone"></i>
+            </a>
+            <a href="sms:+237659286033" class="contact-btn sms" title="SMS">
+                <i class="fas fa-sms"></i>
+            </a>
+        </div>
+        <button class="contact-toggle" title="Nous contacter">
+            <i class="fas fa-comments"></i>
+        </button>
+    </div>
+    <style>
+        .contact-floating {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .contact-toggle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #007bff;
+            color: white;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+        .contact-toggle:hover {
+            transform: scale(1.1);
+            background: #0056b3;
+        }
+        .contact-options {
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .contact-options.active {
+            display: flex;
+        }
+        .contact-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .contact-btn:hover {
+            transform: scale(1.1);
+        }
+        .contact-btn.whatsapp { background: #25D366; }
+        .contact-btn.facebook { background: #1877F2; }
+        .contact-btn.gmail { background: #DB4437; }
+        .contact-btn.call { background: #28a745; }
+        .contact-btn.sms { background: #6c757d; }
+    </style>
+    <script>
+        document.querySelector('.contact-toggle').addEventListener('click', function() {
+            document.querySelector('.contact-options').classList.toggle('active');
+        });
+    </script>
+    <!-- //Floating Contact Options -->
 
     <?php
     // ===== GESTION DU MESSAGE PHP =====
@@ -417,6 +502,15 @@
     <!-- bootstrap -->
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- //bootstrap -->
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
     <!-- //Js scripts -->
 </body>
 
